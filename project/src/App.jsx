@@ -105,14 +105,27 @@ function CreateWalletScreen({ navigation }) {
 
 function SecureScreen({ navigation }) {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={styles.black}>어쩌구 저쩌구 안내문</Text>
-        <Text style={styles.black}>Face ID</Text>
-        <Text style={styles.black}>Passcode</Text>
-        <Button
+      <View style={styles.backgroundContainerMain}>
+        <TouchableOpacity onPress={() => navigation.navigate('Account')} style={styles.buttonBox_yellow}>
+            <Text style={styles.buttonText_small}>이전으로</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Secure')} style={styles.buttonBox_yellow}>
+            <Text style={styles.buttonText_small}>화면 안내</Text>
+        </TouchableOpacity>
+        <Text style={styles.title_yellow}>안내사항</Text>
+        <Text style={styles.text_yellow}>카카오 계정 연결 없이 사용하면 {"\n"}
+이후 결제와 데이터 저장이 되지 않습니다.</Text>
+        <Text style={styles.text_yellow}>마이페이지에서 언제든지 연동할 수 있습니다.</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Secure')} style={styles.buttonBox_yellow}>
+            <Text style={styles.buttonText_small}>사용하기</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Secure')} style={styles.buttonBox_yellow}>
+            <Text style={styles.buttonText_small}>카카오계정 연결하기</Text>
+        </TouchableOpacity>
+        {/* <Button
           title="Go to Main"
           onPress={() => navigation.navigate('Main')}
-        />
+        /> */}
       </View>
     );
 }
@@ -175,7 +188,7 @@ const Flex = () => {
             <Stack.Screen name="Main" component={MainScreen} />
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen 
-                name="Create Wallet" 
+                name="Account" 
                 component={CreateWalletScreen} 
                 options={{ title: 'Account' }}
             />
