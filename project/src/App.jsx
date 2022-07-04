@@ -44,7 +44,6 @@ import * as React from 'react';
 import { StyleSheet, TouchableOpacity, Button, Text, View } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
 // 메인 화면
 function MainScreen({ onPress, navigation }) {
     return (
@@ -53,7 +52,7 @@ function MainScreen({ onPress, navigation }) {
 
         {/* Landing button */}
         <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={styles.buttonBox_yellow}>
-            <Text style={styles.buttonText}>시작하기</Text>
+            <Text style={styles.buttonText}>시작기</Text>
         </TouchableOpacity>
 
         {/* Create new wallet */}
@@ -83,7 +82,7 @@ function CreateWalletScreen({ navigation }) {
       <View style={styles.backgroundContainerMain}>
         <Text style={styles.text_yellow}>대형 쓰레기 수거 등록과 결제를 
 하려면{"\n"} 카카오 계정 연동이 필요합니다.</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Secure')} style={styles.buttonBox_yellow}>
+        <TouchableOpacity onPress={() => navigation.navigate('KakaoConnection')} style={styles.buttonBox_yellow}>
             <Text style={styles.buttonText_small}>카카오계정 연결하기</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Secure')} style={styles.buttonBox_yellow}>
@@ -164,6 +163,14 @@ function DetailsScreen({ navigation }) {
     );
 }
 
+function KakaoConnectScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>카카오 로그인 연결 페이지</Text>
+    </View>
+  );
+}
+
 const Stack = createNativeStackNavigator();
 
 
@@ -171,7 +178,7 @@ const Flex = () => {
     
   return (
     <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="Main">
             <Stack.Screen name="Main" component={MainScreen} />
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen 
@@ -182,7 +189,7 @@ const Flex = () => {
             <Stack.Screen 
                 name="Secure" 
                 component={SecureScreen} 
-                options={{ title: 'Secure' }}
+                options={{ title: 'SecureScreen' }}
             />
             <Stack.Screen
                 name="Home"
@@ -190,6 +197,7 @@ const Flex = () => {
                 options={{ title: 'Home' }}
             />
             <Stack.Screen name="Details" component={DetailsScreen} />
+            <Stack.Screen name="KakaoConnection" component={KakaoConnectScreen}/>
         </Stack.Navigator>
   </NavigationContainer>
     
