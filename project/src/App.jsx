@@ -44,11 +44,15 @@ import * as React from 'react';
 import { StyleSheet, TouchableOpacity, Button, Text, View } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-// 메인 화면
-function MainScreen({ onPress, navigation }) {
+
+
+
+
+// 랜딩 화면
+function LandingScreen({ onPress, navigation }) {
     return (
       <View style={styles.backgroundContainerMain}>
-        <Text style={styles.title_yellow}>쉬운 쓰레기</Text>
+        <Text style={[styles.title_yellow]}>쉬운 쓰레기</Text>
 
         {/* Landing button */}
         <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={styles.buttonBox_yellow}>
@@ -64,23 +68,59 @@ function MainScreen({ onPress, navigation }) {
       </View>
     );
 }
-//NoConnectScreen
-function NoConnectScreen({ navigation }) {
+
+// 계정 연결 페이지 (카카오 계정 연결 / 연결 없이)
+function CreateWalletScreen({ navigation }) {
+  return (
+    <View style={styles.backgroundContainerMain}>
+      <Text style={styles.text_yellow}>대형 쓰레기 수거 등록과 결제를 
+하려면{"\n"} 카카오 계정 연동이 필요합니다.</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('KakaoConnectScreen')} style={styles.buttonBox_yellow}>
+          <Text style={styles.buttonText_small}>카카오계정 연결하기</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonBox_yellow}>
+          <Text style={styles.buttonText_small}>연결 없이 사용하기</Text>
+      </TouchableOpacity>
+      <Text style={styles.text_yellow}>마이 페이지에서 언제든지 연결 가능해요!</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('HowtoConnectKakao')} style={styles.buttonBox_yellow}>
+          <Text style={styles.buttonText_small}>카카오 계정 연결하는 법이 궁금해요!</Text>
+      </TouchableOpacity>
+      {/* <Text style={styles.text_yellow}>Privacy Policy</Text> */}
+      {/* <TouchableOpacity onPress={() => navigation.navigate('Secure')} style={styles.textBtn}>
+          <Text style={styles.textBtn}>Accept</Text>
+      </TouchableOpacity> */}
+    </View>
+    // <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    // </View>
+  );
+}
+
+//카카오 계정 연결하기 페이지
+function KakaoConnectScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <TouchableOpacity onPress={() => navigation.navigate('KakaoConnection')} style={styles.buttonBox_yellow}>
+      <Text>카카오 로그인 연결 페이지</Text>
+    </View>
+  );
+}
+
+//카카오 연결 없이 사용하기
+function NoConnectScreen({ navigation }) {
+  return (
+    <View style={styles.backgroundContainerMain}>
+      <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={styles.buttonBox_yellow}>
           <Text style={styles.buttonText_small}>이전으로</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('KakaoConnection')} style={styles.buttonBox_yellow}>
+      <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={styles.buttonBox_yellow}>
             <Text style={styles.buttonText_small}>화면 안내</Text>
       </TouchableOpacity>
-      <Text style={styles.text_yellow}>안내 사항</Text>
+      <Text style={styles.title_yellow}>안내 사항</Text>
       <Text style={styles.text_yellow}>카카오 계정 연결 없이 사용하면{"\n"}이후 결제와 데이터 저장이 되지 않습니다.</Text>
       <Text style={styles.text_yellow}>마이페이지에서 언제든지 연동할 수 있습니다.</Text>
       <TouchableOpacity onPress={() => navigation.navigate('KakaoConnection')} style={styles.buttonBox_yellow}>
             <Text style={styles.buttonText_small}>사용하기</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('KakaoConnection')} style={styles.buttonBox_yellow}>
+      <TouchableOpacity onPress={() => navigation.navigate('KakaoConnectScreen')} style={styles.buttonBox_yellow}>
             <Text style={styles.buttonText_small}>카카오계정 연결하기</Text>
       </TouchableOpacity>
    
@@ -88,6 +128,14 @@ function NoConnectScreen({ navigation }) {
   );
 }
 
+//카카오 계정 연결하는 법이 궁금해요! 페이지
+function HowtoConnectKakao({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>카카오 계정 연결하는 법이 궁금해요! 페이지</Text>
+    </View>
+  );
+}
 
 function LoginScreen({ navigation }) {
     return (
@@ -101,30 +149,17 @@ function LoginScreen({ navigation }) {
     );
 }
 
-function CreateWalletScreen({ navigation }) {
-    return (
-      <View style={styles.backgroundContainerMain}>
-        <Text style={styles.text_yellow}>대형 쓰레기 수거 등록과 결제를 
-하려면{"\n"} 카카오 계정 연동이 필요합니다.</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('KakaoConnection')} style={styles.buttonBox_yellow}>
-            <Text style={styles.buttonText_small}>카카오계정 연결하기</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Secure')} style={styles.buttonBox_yellow}>
-            <Text style={styles.buttonText_small}>연결 없이 사용하기</Text>
-        </TouchableOpacity>
-        <Text style={styles.text_yellow}>마이 페이지에서 언제든지 연결 가능해요!</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Secure')} style={styles.buttonBox_yellow}>
-            <Text style={styles.buttonText_small}>카카오 계정 연결하는 법이 궁금해요!</Text>
-        </TouchableOpacity>
-        {/* <Text style={styles.text_yellow}>Privacy Policy</Text> */}
-        {/* <TouchableOpacity onPress={() => navigation.navigate('Secure')} style={styles.textBtn}>
-            <Text style={styles.textBtn}>Accept</Text>
-        </TouchableOpacity> */}
-      </View>
-      // <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      // </View>
-    );
+//화면안내,메인페이지
+function MainScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text style={styles.black}>메인페이지</Text>
+
+      
+    </View>
+  );
 }
+
 
 function SecureScreen({ navigation }) {
     return (
@@ -149,6 +184,7 @@ function HomeScreen({ onpress, navigation }) {
             // Try setting `flexDirection` to `"row"`.
             flexDirection: "column"
             }]}>      
+            
             <View style={styles.backgroundContainer}>
                 <Text style={styles.title_white}>{currency} {money}</Text>
                 <Text style={styles.white}>Your main Altza</Text>
@@ -175,53 +211,40 @@ function HomeScreen({ onpress, navigation }) {
     );
 }
 
-function DetailsScreen({ navigation }) {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Details Screen</Text>
-        <Button
-          title="Go to Details... again"
-          onPress={() => navigation.navigate('Home')}
-        />
-      </View>
-    );
-}
 
-function KakaoConnectScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>카카오 로그인 연결 페이지</Text>
-    </View>
-  );
-}
+
+
 
 const Stack = createNativeStackNavigator();
 
 
 const Flex = () => {
-    
   return (
     <NavigationContainer>
         <Stack.Navigator initialRouteName="Main">
-            <Stack.Screen name="Main" component={MainScreen} />
+            <Stack.Screen name="Main" component={LandingScreen} />
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen 
                 name="Create Wallet" 
                 component={CreateWalletScreen} 
-                options={{ title: 'Account' }}
+                /*options={{ title: 'Account' }}*/
             />
             <Stack.Screen 
                 name="Secure" 
                 component={SecureScreen} 
-                options={{ title: 'SecureScreen' }}
+                // options={{ title: 'SecureScreen' }}
             />
             <Stack.Screen
                 name="Home"
                 component={HomeScreen}
-                options={{ title: 'Home' }}
+                // options={{ title: 'Home' }}
             />
-            <Stack.Screen name="Details" component={DetailsScreen} />
-            <Stack.Screen name="KakaoConnection" component={KakaoConnectScreen}/>
+            
+            
+            <Stack.Screen name="HowtoConnectKakao" component={HowtoConnectKakao}/>
+            <Stack.Screen name="MainScreen" component={MainScreen} />
+            <Stack.Screen name="KakaoConnectScreen" component={KakaoConnectScreen}/>
+            <Stack.Screen name="NoConnectScreen" component={NoConnectScreen}/>
         </Stack.Navigator>
   </NavigationContainer>
     
