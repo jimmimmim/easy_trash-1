@@ -49,17 +49,19 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 function MainScreen({ onPress, navigation }) {
     return (
       <View style={styles.backgroundContainerMain}>
-        <Text style={styles.title_black}>ALT-ZA</Text>
+        <Text style={styles.title_yellow}>쉬운 쓰레기</Text>
 
-        {/* Log in button */}
-        <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.buttonBox}>
-            <Text style={styles.buttonText}>Log in</Text>
+        {/* Landing button */}
+        <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={styles.buttonBox_yellow}>
+            <Text style={styles.buttonText}>시작하기</Text>
         </TouchableOpacity>
 
         {/* Create new wallet */}
-        <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={styles.textBtn}>
+        {/* <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={styles.textBtn}>
             <Text style={styles.textBtn}>Create a new Altza wallet</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
+        <Text style={styles.text_yellow}>쉬운 쓰레기는 시각 장애인을 위해 {"\n"} 음성 안내가 자동 실행됩니다.</Text>
+        <Text style={styles.text_yellow}>아래의 녹색 버튼을 오른쪽으로 옮기시면 중단됩니다.</Text>
       </View>
     );
 }
@@ -78,14 +80,26 @@ function LoginScreen({ navigation }) {
 
 function CreateWalletScreen({ navigation }) {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={styles.black}>어쩌구 저쩌구 안내문</Text>
-        <Text style={styles.black}>Terms of Service</Text>
-        <Text style={styles.black}>Privacy Policy</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Secure')} style={styles.textBtn}>
-            <Text style={styles.textBtn}>Accept</Text>
+      <View style={styles.backgroundContainerMain}>
+        <Text style={styles.text_yellow}>대형 쓰레기 수거 등록과 결제를 
+하려면{"\n"} 카카오 계정 연동이 필요합니다.</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Secure')} style={styles.buttonBox_yellow}>
+            <Text style={styles.buttonText_small}>카카오계정 연결하기</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Secure')} style={styles.buttonBox_yellow}>
+            <Text style={styles.buttonText_small}>연결 없이 사용하기</Text>
+        </TouchableOpacity>
+        <Text style={styles.text_yellow}>마이 페이지에서 언제든지 연결 가능해요!</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Secure')} style={styles.buttonBox_yellow}>
+            <Text style={styles.buttonText_small}>카카오 계정 연결하는 법이 궁금해요!</Text>
+        </TouchableOpacity>
+        {/* <Text style={styles.text_yellow}>Privacy Policy</Text> */}
+        {/* <TouchableOpacity onPress={() => navigation.navigate('Secure')} style={styles.textBtn}>
+            <Text style={styles.textBtn}>Accept</Text>
+        </TouchableOpacity> */}
       </View>
+      // <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      // </View>
     );
 }
 
@@ -163,7 +177,7 @@ const Flex = () => {
             <Stack.Screen 
                 name="Create Wallet" 
                 component={CreateWalletScreen} 
-                options={{ title: 'Legal' }}
+                options={{ title: 'Account' }}
             />
             <Stack.Screen 
                 name="Secure" 
@@ -188,7 +202,7 @@ const styles = StyleSheet.create({
   },
   backgroundContainerMain: {
     flex: 1,
-    backgroundColor: '#FFF',
+    backgroundColor: '#2A4747',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -205,8 +219,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  title_black: {
-    color: "#000",
+  title_yellow: {
+    color: "#FAFF00",
     fontSize: 40,
     fontWeight: 'bold',
   },
@@ -240,6 +254,12 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 12,
   },
+  buttonBox_yellow: {
+    backgroundColor: "#FAFF00",
+    borderRadius: 50,
+    paddingVertical: 12,
+    paddingHorizontal: 50,
+  },
   buttonBox_white: {
     elevation: 8,
     width: '30%',
@@ -249,8 +269,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
   },
   buttonText: {
-    fontSize: 15,
-    color: "#000",
+    fontSize: 40,
+    color: "#2A4747",
+    fontWeight: "bold",
+    alignSelf: "center",
+    textTransform: "uppercase",
+  },
+  buttonText_small: {
+    fontSize: 20,
+    color: "#2A4747",
     fontWeight: "bold",
     alignSelf: "center",
     textTransform: "uppercase",
@@ -261,6 +288,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     alignSelf: "center",
     textTransform: "uppercase",
+  },
+  text_yellow: {
+    color: "#FAFF00",
+    alignSelf: "center",
+    textAlign: "center",
   },
 });
 
