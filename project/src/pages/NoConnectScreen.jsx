@@ -19,7 +19,7 @@ function NoConnectScreen({ navigation }) {
       <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={styles.buttonBox_yellow}>
             <Text style={styles.buttonText_small}>사용하기</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => alert("카카오 연결")} style={styles.buttonBox_yellow}>
+      <TouchableOpacity onPress={() => navigation.navigate('KakaoConnectScreen')} style={styles.buttonBox_yellow}>
             <Text style={styles.buttonText_small}>카카오계정 연결하기</Text>
       </TouchableOpacity>
    

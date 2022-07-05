@@ -217,7 +217,7 @@ import LandingScreen from './pages/LandingScreen';
 import CreateWalletScreen from './pages/CreateWalletScreen';
 import HowtoConnectKakao from './pages/HowtoConnectKakao';
 import NoConnectScreen from './pages/NoConnectScreen';
-import KakoConnectScreen from './pages/KakoConnectScreen';
+import KakaoConnectScreen from './pages/KakaoConnectScreen';
 import InformFunction_Recycle from './pages/InformFunction_Recycle';
 import MainScreen from './pages/MainScreen';
 
@@ -249,7 +249,7 @@ const Flex = () => {
             <Stack.Screen name="InformFunction_Recycle" component={InformFunction_Recycle}/>
             <Stack.Screen name="HowtoConnectKakao" component={HowtoConnectKakao}/>
             <Stack.Screen name="MainScreen" component={MainScreen} />
-            <Stack.Screen name="KakaoConnectScreen" component={KakoConnectScreen}/>
+            <Stack.Screen name="KakaoConnectScreen" component={KakaoConnectScreen}/>
             <Stack.Screen name="NoConnectScreen" component={NoConnectScreen}/> 
         </Stack.Navigator>
   </NavigationContainer>
