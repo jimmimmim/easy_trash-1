@@ -1,6 +1,11 @@
 import { StyleSheet } from 'react-native';
 
 const Layout = StyleSheet.create({
+    swipebar:{
+        backgroundColor:'#FAFF00',
+        width:266,
+        borderRadius:50,
+    },
     container: {
         flex: 1,
       },
