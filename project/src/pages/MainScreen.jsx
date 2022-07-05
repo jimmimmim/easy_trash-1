@@ -6,8 +6,29 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // 메인 페이지 (버튼 6개)
 function MainScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>메인 페이지</Text>
+    <View style={styles.backgroundContainerMain}>
+        <Text style={styles.title_yellow}>메인 페이지{"\n"}암튼 로고</Text> 
+        <View style={styles.container}>
+            <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
+                <Text style={styles.buttonText_small}>분리수거함{"\n"}카메라</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
+                <Text style={styles.buttonText_small}>쓰레기{"\n"}카메라</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
+                <Text style={styles.buttonText_small}>폐가전제품{"\n"}폐기 신청</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
+                <Text style={styles.buttonText_small}>대형쓰레기{"\n"}폐기 신청</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
+                <Text style={styles.buttonText_small}>쓰레기{"\n"}대백과</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
+                <Text style={styles.buttonText_small}>사용법</Text>
+            </TouchableOpacity>
+        </View>
+        
     </View>
   );
 }
@@ -15,6 +36,10 @@ function MainScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
+      flexWrap: "wrap",
+      flexDirection: "row",
+      justifyContent: "center",
+      alignContent: "center",
     },
     backgroundContainerMain: {
       flex: 1,
@@ -39,6 +64,7 @@ const styles = StyleSheet.create({
       color: "#FAFF00",
       fontSize: 40,
       fontWeight: 'bold',
+      textAlign: "center",
     },
     title_white: {
       color: "#FFF",
@@ -64,17 +90,29 @@ const styles = StyleSheet.create({
       justifyContent: 'space-between',
     },
     buttonBox: {
-      elevation: 8,
-      backgroundColor: "#009688",
-      borderRadius: 10,
-      paddingVertical: 10,
-      paddingHorizontal: 12,
+        elevation: 8,
+        backgroundColor: "#009688",
+        borderRadius: 10,
+        paddingVertical: 10,
+        paddingHorizontal: 12,
     },
     buttonBox_yellow: {
-      backgroundColor: "#FAFF00",
-      borderRadius: 50,
-      paddingVertical: 12,
-      paddingHorizontal: 50,
+        backgroundColor: "#FAFF00",
+        borderRadius: 50,
+        paddingVertical: 12,
+        paddingHorizontal: 50,
+    },
+    buttonCircle_yellow: {
+        width: 150,
+        height: 150,
+        backgroundColor: "#FAFF00",
+        borderRadius: 100,
+        borderColor: "#B7C712",
+        borderWidth: 5,
+        justifyContent: "center",
+        margin: 10,
+        paddingVertical: 12,
+        paddingHorizontal: 12,
     },
     buttonBox_white: {
       elevation: 8,
@@ -96,6 +134,7 @@ const styles = StyleSheet.create({
       color: "#2A4747",
       fontWeight: "bold",
       alignSelf: "center",
+      textAlign: "center",
       textTransform: "uppercase",
     },
     buttonText_white: {

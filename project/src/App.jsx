@@ -233,20 +233,7 @@ const Flex = () => {
                 component={CreateWalletScreen} 
                 /*options={{ title: 'Account' }}*/
             />
-            {/* <Stack.Screen 
-                name="Secure" 
-                component={SecureScreen} 
-                // options={{ title: 'SecureScreen' }}
-            />
-            <Stack.Screen
-                name="Home"
-                component={HomeScreen}
-                // options={{ title: 'Home' }}
-            />
-            */}
-            
             <Stack.Screen name="HowtoConnectKakao" component={HowtoConnectKakao}/>
-            {/* <Stack.Screen name="MainScreen" component={MainScreen} /> */}
             <Stack.Screen name="KakaoConnectScreen" component={KakoConnectScreen}/>
             <Stack.Screen name="NoConnectScreen" component={NoConnectScreen}/> 
             <Stack.Screen name="MainScreen" component={MainScreen}/> 

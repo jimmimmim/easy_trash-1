@@ -10,13 +10,8 @@ function LandingScreen({ onPress, navigation }) {
 
         {/* Landing button */}
         <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={styles.buttonBox_yellow}>
-            <Text style={styles.buttonText}>시작기</Text>
+            <Text style={styles.buttonText}>시작하기</Text>
         </TouchableOpacity>
-
-        {/* Create new wallet */}
-        {/* <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={styles.textBtn}>
-            <Text style={styles.textBtn}>Create a new Altza wallet</Text>
-        </TouchableOpacity> */}
         <Text style={styles.text_yellow}>쉬운 쓰레기는 시각 장애인을 위해 {"\n"} 음성 안내가 자동 실행됩니다.</Text>
         <Text style={styles.text_yellow}>아래의 녹색 버튼을 오른쪽으로 옮기시면 중단됩니다.</Text>
       </View>
