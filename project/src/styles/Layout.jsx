@@ -1,25 +1,17 @@
 import { StyleSheet } from 'react-native';
 
 const Layout = StyleSheet.create({
+
+    // CONTAINER
     container: {
-        flex: 1,
-      },
+        width: "80%",
+        height: "70%",
+        justifyContent: "space-between",
+        alignItems: "center",
+    },
     backgroundContainerMain: {
         flex: 1,
         backgroundColor: '#2A4747',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    backgroundContainer: {
-        flex: 1,
-        backgroundColor: '#6D0000',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    bottomSection: {
-        flex: 2,
-        backgroundColor: '#FFF',
-        color: '#000',
         justifyContent: 'center',
         alignItems: 'center',
     },

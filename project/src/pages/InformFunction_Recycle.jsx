@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { StyleSheet, TouchableOpacity, Button, Text, View } from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import layout from '../styles/Layout';
+import button from '../styles/Button';
+import text from '../styles/Text';
 
-// //카카오 계정 연결하는 법이 궁금해요! 페이지
+// 카카오 계정 연결하는 법이 궁금해요! 페이지
 function InformFunction_Recycle({ navigation }) {
   return (
     <View style={styles.backgroundContainerMain}>
