@@ -10,6 +10,7 @@
         "eject": "expo eject"
     },
     "dependencies": {
+        "@actbase/react-kakaosdk": "^0.9.19",
         "@react-native-community/masked-view": "^0.1.11",
         "@react-navigation/native": "^6.0.10",
         "@react-navigation/native-stack": "^6.6.2",
