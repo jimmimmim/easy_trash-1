@@ -7,7 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 function InformFunction_Recycle({ navigation }) {
   return (
     <View style={styles.backgroundContainerMain}>
-      <TouchableOpacity onPress={() => alert('이전으로')} style={styles.buttonBox_yellow}>
+      <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={styles.buttonBox_yellow}>
           <Text style={styles.buttonText_small}>이전으로</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => alert('기능안내 음성')} style={styles.buttonBox_yellow}>

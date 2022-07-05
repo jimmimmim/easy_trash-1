@@ -9,7 +9,7 @@ function MainScreen({ navigation }) {
     <View style={styles.backgroundContainerMain}>
         <Text style={styles.title_yellow}>메인 페이지{"\n"}암튼 로고</Text> 
         <View style={styles.container}>
-            <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
+            <TouchableOpacity onPress={() => navigation.navigate('InformFunction_Recycle')} style={styles.buttonCircle_yellow}>
                 <Text style={styles.buttonText_small}>분리수거함{"\n"}카메라</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
