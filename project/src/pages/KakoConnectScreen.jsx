@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StyleSheet, TouchableOpacity, Button, Text, View } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import KakaoSDK from '@actbase/react-kakaosdk';
 
 // //카카오 계정 연결하기 페이지
 function KakaoConnectScreen({ navigation }) {
