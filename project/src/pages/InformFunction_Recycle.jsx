@@ -3,26 +3,21 @@ import { StyleSheet, TouchableOpacity, Button, Text, View } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-//카카오 연결 없이 사용하기
-function NoConnectScreen({ navigation }) {
+// //카카오 계정 연결하는 법이 궁금해요! 페이지
+function InformFunction_Recycle({ navigation }) {
   return (
     <View style={styles.backgroundContainerMain}>
-      <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={styles.buttonBox_yellow}>
+      <TouchableOpacity onPress={() => alert('이전으로')} style={styles.buttonBox_yellow}>
           <Text style={styles.buttonText_small}>이전으로</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => alert("화면안내")} style={styles.buttonBox_yellow}>
-            <Text style={styles.buttonText_small}>화면 안내</Text>
+      <TouchableOpacity onPress={() => alert('기능안내 음성')} style={styles.buttonBox_yellow}>
+          <Text style={styles.buttonText_small}>기능 안내</Text>
       </TouchableOpacity>
-      <Text style={styles.title_yellow}>안내 사항</Text>
-      <Text style={styles.text_yellow}>카카오 계정 연결 없이 사용하면{"\n"}이후 결제와 데이터 저장이 되지 않습니다.</Text>
-      <Text style={styles.text_yellow}>마이페이지에서 언제든지 연동할 수 있습니다.</Text>
-      <TouchableOpacity onPress={() => alert("사용하기")} style={styles.buttonBox_yellow}>
-            <Text style={styles.buttonText_small}>사용하기</Text>
+
+      <Text style={styles.text_yellow}>분리수거함 카메라 기능 설명{"\n"}텍스트</Text>
+      <TouchableOpacity onPress={() => alert('카메라 연결')} style={styles.buttonBox_yellow}>
+          <Text style={styles.buttonText_small}>사용하기</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => alert("카카오 연결")} style={styles.buttonBox_yellow}>
-            <Text style={styles.buttonText_small}>카카오계정 연결하기</Text>
-      </TouchableOpacity>
-   
     </View>
   );
 }
@@ -125,4 +120,4 @@ const styles = StyleSheet.create({
       textAlign: "center",
     },
   });
-export default NoConnectScreen;
+export default InformFunction_Recycle;
