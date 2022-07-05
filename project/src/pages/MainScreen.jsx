@@ -2,17 +2,20 @@ import * as React from 'react';
 import { StyleSheet, TouchableOpacity, Button, Text, View, SafeAreaView  } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import layout from '../styles/Layout';
+import button from '../styles/Button';
+import text from '../styles/Text';
 
 // 메인 페이지 (버튼 6개)
 function MainScreen({ navigation }) {
   return (
-    <SafeAreaView style={styles.backgroundContainerMain}>
-        <SafeAreaView style={styles.titleContainer}>
-        <Text style={styles.title_yellow}>메인 페이지{"\n"}암튼 로고</Text>
+    <SafeAreaView style={layout.backgroundContainerMain}>
+        <SafeAreaView style={layout.titleContainer}>
+        <Text style={text.title_yellow}>메인 페이지{"\n"}암튼 로고</Text>
         </SafeAreaView>
-        <SafeAreaView style={styles.container}>
-            <SafeAreaView style={styles.innercontainer}>
-                <SafeAreaView style={styles.nestedcontainer}>
+        <SafeAreaView style={layout.container}>
+            <SafeAreaView style={layout.innercontainer}>
+                <SafeAreaView style={layout.nestedcontainer}>
                     <TouchableOpacity onPress={() => navigation.navigate('InformFunction_Recycle')} style={styles.buttonCircle_yellow_left}>
                         <Text style={styles.buttonText_small}>분리수거함{"\n"}카메라</Text>
                     </TouchableOpacity>
@@ -59,45 +62,7 @@ const styles = StyleSheet.create({
       justifyContent: "space-between",
       alignItems: "center",
     },
-    innercontainer: {
-        width: "90%",
-        height: "30%",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignContent: "space-around",
-    },
-    nestedcontainer: {
-        width: "46%",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignContent: "center",
-    },
-    titleContainer: {
-      flexWrap: "wrap",
-      flexDirection: "row",
-      justifyContent: "center",
-      alignContent: "center",
-      marginBottom: 20,
-    },
-    backgroundContainerMain: {
-        flex: 1,
-        backgroundColor: '#2A4747',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    backgroundContainer: {
-      flex: 1,
-      backgroundColor: '#6D0000',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    bottomSection: {
-      flex: 2,
-      backgroundColor: '#FFF',
-      color: '#000',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
+    
     title_yellow: {
       color: "#FAFF00",
       fontSize: 40,
