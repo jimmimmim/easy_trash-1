@@ -2,17 +2,16 @@ import * as React from 'react';
 import { StyleSheet, TouchableOpacity, Button, Text, View } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import indStyle from '../component/LandingScreenStyle'
 function LandingScreen({ onPress, navigation }) {
     return (
       <View style={styles.backgroundContainerMain}>
-        <Text style={[styles.title_yellow]}>쉬운 쓰레기</Text>
 
         {/* Landing button */}
         <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={styles.buttonBox_yellow}>
             <Text style={styles.buttonText}>시작하기</Text>
         </TouchableOpacity>
-        <Text style={styles.text_yellow}>쉬운 쓰레기는 시각 장애인을 위해 {"\n"} 음성 안내가 자동 실행됩니다.</Text>
+        <Text style={[styles.text_yellow, indStyle.text_style] }>쉬운 쓰레기는 시각 장애인을 위해 {"\n"} 음성 안내가 자동 실행됩니다.</Text>
         <Text style={styles.text_yellow}>아래의 녹색 버튼을 오른쪽으로 옮기시면 중단됩니다.</Text>
       </View>
     );
