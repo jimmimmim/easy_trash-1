@@ -101,6 +101,7 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         paddingVertical: 12,
         paddingHorizontal: 50,
+        margin: 10,
     },
     buttonCircle_yellow: {
         width: 150,

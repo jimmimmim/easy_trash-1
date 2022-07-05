@@ -87,6 +87,7 @@ function CreateWalletScreen({ navigation }) {
       borderRadius: 50,
       paddingVertical: 12,
       paddingHorizontal: 50,
+      margin: 10,
     },
     buttonBox_white: {
       elevation: 8,
