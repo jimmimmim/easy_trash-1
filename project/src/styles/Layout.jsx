@@ -35,6 +35,23 @@ const Layout = StyleSheet.create({
       alignContent: "center",
       marginBottom: 20,
     },
+    brailleContainer: {
+        width:"70%", 
+        height:"25%",
+        // marginTop:-300,
+        marginBottom: 20,
+        // backgroundColor:'none',
+        borderColor: '#FAFF00',
+        borderWidth: 2,
+        borderLeftWidth: 0,
+        borderRightWidth: 0,
+    },
+    swipebar:{
+        backgroundColor:'#FAFF00',
+        width:266,
+        borderRadius:50,
+        marginTop: 10,
+    },
 });
 
 

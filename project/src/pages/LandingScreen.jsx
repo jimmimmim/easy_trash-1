@@ -70,10 +70,10 @@ function LandingScreen({ onPress, navigation }) {
             <Text style={text.buttonText}>시작하기</Text>
         </TouchableOpacity>
         <Text style={[text.text_yellow, text.text_style] }>쉬운 쓰레기는 시각 장애인을 위해 {"\n"} 음성 안내가 자동 실행됩니다.</Text>
-        <Text style={[text.text_yellow, {marginBottom:200}]}>아래의 녹색 버튼을 오른쪽으로 옮기시면 중단됩니다.</Text>
+        <Text style={[text.text_yellow]}>아래의 녹색 버튼을 오른쪽으로 옮기시면 중단됩니다.</Text>
         <>
       <StatusBar />
-      <SafeAreaView style={[layout.swipebar, {marginBottom:-300}]}>
+      <SafeAreaView style={[layout.swipebar]}>
         <Item/>
       </SafeAreaView>
     </>
