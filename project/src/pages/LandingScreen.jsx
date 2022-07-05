@@ -12,66 +12,46 @@ import {GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const LeftSwipeActions = () => {
   return (
-    <View
-      style={{ flex: 1, backgroundColor: '#ccffbd', justifyContent: 'center' }}
-    >
-      <Text
-        style={{
-          color: '#40394a',
-          paddingHorizontal: 10,
-          fontWeight: '600',
-          paddingHorizontal: 30,
-          paddingVertical: 20,
-        }}
-      >
-        Bookmark
-      </Text>
+    <View>
+      <SafeAreaView style={{backgroundColor:'#FAFF00',
+        width:180,
+        borderRadius:50,
+    }}></SafeAreaView>
     </View>
   );
 };
 const rightSwipeActions = () => {
   return (
-    <View
-      style={{
-        backgroundColor: '#ff8303',
-        justifyContent: 'center',
-        alignItems: 'flex-end',
-      }}
-    >
-      <Text
-        style={{
-          color: '#1b1a17',
-          paddingHorizontal: 10,
-          fontWeight: '600',
-          paddingHorizontal: 30,
-          paddingVertical: 20,
-        }}
-      >
-        Delete
-      </Text>
+    <View>
+     <SafeAreaView style={{backgroundColor:'#FAFF00',
+        width:180,
+        borderRadius:50,
+    }}></SafeAreaView>
     </View>
   );
 };
 const swipeFromLeftOpen = () => {
-  alert('Swipe from left');
+  alert('Swipe from left'); //이거 할 때 음성 중지
 };
 const swipeFromRightOpen = () => {
-  alert('Swipe from right');
+  alert('Swipe from right'); //이거 할 때 음성 실행
 };
 
 const Item = () => (
   <GestureHandlerRootView>
   <Swipeable
     renderLeftActions={LeftSwipeActions}
-    renderRightActions={rightSwipeActions}
-    onSwipeableRightOpen={swipeFromRightOpen}
     onSwipeableLeftOpen={swipeFromLeftOpen}
+    onSwipeableWillClose={swipeFromRightOpen}
   >
     <View
       style={{
+        width:50,
         paddingHorizontal: 30,
         paddingVertical: 20,
-        backgroundColor: 'white',
+        backgroundColor: '#427171',
+        borderRadius:40,
+        margin:10
       }}
     >
       <Text style={{ fontSize: 24 }}>
@@ -85,19 +65,15 @@ const Item = () => (
 function LandingScreen({ onPress, navigation }) {
     return (
       <View style={layout.backgroundContainerMain}>
-
-        {/* Landing button */}
+        <SafeAreaView style={layout.brailleContainer}/>
         <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={button.buttonBox_yellow}>
             <Text style={text.buttonText}>시작하기</Text>
         </TouchableOpacity>
         <Text style={[text.text_yellow, text.text_style] }>쉬운 쓰레기는 시각 장애인을 위해 {"\n"} 음성 안내가 자동 실행됩니다.</Text>
-        <Text style={text.text_yellow}>아래의 녹색 버튼을 오른쪽으로 옮기시면 중단됩니다.</Text>
+        <Text style={[text.text_yellow, {marginBottom:200}]}>아래의 녹색 버튼을 오른쪽으로 옮기시면 중단됩니다.</Text>
         <>
       <StatusBar />
-      <SafeAreaView style={layout.container}>
-        <Text style={{ textAlign: 'center', marginVertical: 20 }}>
-          Swipe right or left
-        </Text>
+      <SafeAreaView style={[layout.swipebar, {marginBottom:-300}]}>
         <Item/>
       </SafeAreaView>
     </>
