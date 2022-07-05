@@ -7,6 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import indStyle from '../styles/LandingScreenStyle';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
+import {GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const LeftSwipeActions = () => {
   return (
@@ -58,6 +59,7 @@ const swipeFromRightOpen = () => {
 };
 
 const Item = () => (
+  <GestureHandlerRootView>
   <Swipeable
     renderLeftActions={LeftSwipeActions}
     renderRightActions={rightSwipeActions}
@@ -76,6 +78,7 @@ const Item = () => (
       </Text>
     </View>
   </Swipeable>
+  </GestureHandlerRootView>
 );
 
 function LandingScreen({ onPress, navigation }) {
