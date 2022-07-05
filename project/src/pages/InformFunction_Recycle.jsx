@@ -3,24 +3,23 @@ import { StyleSheet, TouchableOpacity, Button, Text, View } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function LandingScreen({ onPress, navigation }) {
-    return (
-      <View style={styles.backgroundContainerMain}>
-        <Text style={[styles.title_yellow]}>쉬운 쓰레기</Text>
+// //카카오 계정 연결하는 법이 궁금해요! 페이지
+function InformFunction_Recycle({ navigation }) {
+  return (
+    <View style={styles.backgroundContainerMain}>
+      <TouchableOpacity onPress={() => alert('이전으로')} style={styles.buttonBox_yellow}>
+          <Text style={styles.buttonText_small}>이전으로</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => alert('기능안내 음성')} style={styles.buttonBox_yellow}>
+          <Text style={styles.buttonText_small}>기능 안내</Text>
+      </TouchableOpacity>
 
-        {/* Landing button */}
-        <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={styles.buttonBox_yellow}>
-            <Text style={styles.buttonText}>시작하기</Text>
-        </TouchableOpacity>
-
-        {/* Create new wallet */}
-        {/* <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={styles.textBtn}>
-            <Text style={styles.textBtn}>Create a new Altza wallet</Text>
-        </TouchableOpacity> */}
-        <Text style={styles.text_yellow}>쉬운 쓰레기는 시각 장애인을 위해 {"\n"} 음성 안내가 자동 실행됩니다.</Text>
-        <Text style={styles.text_yellow}>아래의 녹색 버튼을 오른쪽으로 옮기시면 중단됩니다.</Text>
-      </View>
-    );
+      <Text style={styles.text_yellow}>분리수거함 카메라 기능 설명{"\n"}텍스트</Text>
+      <TouchableOpacity onPress={() => alert('카메라 연결')} style={styles.buttonBox_yellow}>
+          <Text style={styles.buttonText_small}>사용하기</Text>
+      </TouchableOpacity>
+    </View>
+  );
 }
 const styles = StyleSheet.create({
     container: {
@@ -121,5 +120,4 @@ const styles = StyleSheet.create({
       textAlign: "center",
     },
   });
-  
-  export default LandingScreen;
+export default InformFunction_Recycle;

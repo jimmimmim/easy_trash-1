@@ -10,16 +10,16 @@ function NoConnectScreen({ navigation }) {
       <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={styles.buttonBox_yellow}>
           <Text style={styles.buttonText_small}>이전으로</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={styles.buttonBox_yellow}>
+      <TouchableOpacity onPress={() => alert("화면안내")} style={styles.buttonBox_yellow}>
             <Text style={styles.buttonText_small}>화면 안내</Text>
       </TouchableOpacity>
       <Text style={styles.title_yellow}>안내 사항</Text>
       <Text style={styles.text_yellow}>카카오 계정 연결 없이 사용하면{"\n"}이후 결제와 데이터 저장이 되지 않습니다.</Text>
       <Text style={styles.text_yellow}>마이페이지에서 언제든지 연동할 수 있습니다.</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('KakaoConnection')} style={styles.buttonBox_yellow}>
+      <TouchableOpacity onPress={() => alert("사용하기")} style={styles.buttonBox_yellow}>
             <Text style={styles.buttonText_small}>사용하기</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('KakaoConnectScreen')} style={styles.buttonBox_yellow}>
+      <TouchableOpacity onPress={() => alert("카카오 연결")} style={styles.buttonBox_yellow}>
             <Text style={styles.buttonText_small}>카카오계정 연결하기</Text>
       </TouchableOpacity>
    

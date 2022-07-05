@@ -218,6 +218,7 @@ import CreateWalletScreen from './pages/CreateWalletScreen';
 import HowtoConnectKakao from './pages/HowtoConnectKakao';
 import NoConnectScreen from './pages/NoConnectScreen';
 import KakoConnectScreen from './pages/KakoConnectScreen';
+import InformFunction_Recycle from './pages/InformFunction_Recycle';
 const Stack = createNativeStackNavigator();
 
 
@@ -243,7 +244,7 @@ const Flex = () => {
                 // options={{ title: 'Home' }}
             />
             */}
-            
+            <Stack.Screen name="InformFunction_Recycle" component={InformFunction_Recycle}/>
             <Stack.Screen name="HowtoConnectKakao" component={HowtoConnectKakao}/>
             {/* <Stack.Screen name="MainScreen" component={MainScreen} /> */}
             <Stack.Screen name="KakaoConnectScreen" component={KakoConnectScreen}/>
