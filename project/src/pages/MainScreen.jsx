@@ -19,31 +19,31 @@ function MainScreen({ navigation }) {
                     </TouchableOpacity>
                 </SafeAreaView>
                 <SafeAreaView style={layout.nestedcontainer}>
-                    <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={button.buttonCircle_yellow}>
+                    <TouchableOpacity onPress={() => navigation.navigate('TrashCamScreen')} style={button.buttonCircle_yellow}>
                         <Text style={text.buttonText_small}>쓰레기{"\n"}카메라</Text>
                     </TouchableOpacity>
                 </SafeAreaView>
             </SafeAreaView>
             <SafeAreaView style={layout.innercontainer}>
                 <SafeAreaView style={layout.nestedcontainer}>
-                    <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={button.buttonCircle_yellow_left}>
+                    <TouchableOpacity onPress={() => navigation.navigate('HomeAppTrashScreen')} style={button.buttonCircle_yellow_left}>
                         <Text style={text.buttonText_small}>폐가전제품{"\n"}폐기 신청</Text>
                     </TouchableOpacity>
                 </SafeAreaView>
                 <SafeAreaView style={layout.nestedcontainer}>
-                    <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={button.buttonCircle_yellow}>
+                    <TouchableOpacity onPress={() => navigation.navigate('BigTrashScreen')} style={button.buttonCircle_yellow}>
                         <Text style={text.buttonText_small}>대형쓰레기{"\n"}폐기 신청</Text>
                     </TouchableOpacity>
                 </SafeAreaView>
             </SafeAreaView>
             <SafeAreaView style={layout.innercontainer}>
                 <SafeAreaView style={layout.nestedcontainer}>
-                    <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={button.buttonCircle_yellow_left}>
+                    <TouchableOpacity onPress={() => navigation.navigate('TrashpediaScreen')} style={button.buttonCircle_yellow_left}>
                         <Text style={text.buttonText_small}>쓰레기{"\n"}대백과</Text>
                     </TouchableOpacity>
                 </SafeAreaView>
                 <SafeAreaView style={layout.nestedcontainer}>
-                    <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={button.buttonCircle_yellow}>
+                    <TouchableOpacity onPress={() => navigation.navigate('TutorialScreen')} style={button.buttonCircle_yellow}>
                         <Text style={text.buttonText_small}>사용법</Text>
                     </TouchableOpacity>
                 </SafeAreaView>
