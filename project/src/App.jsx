@@ -218,8 +218,9 @@ import CreateWalletScreen from './pages/CreateWalletScreen';
 import HowtoConnectKakao from './pages/HowtoConnectKakao';
 import NoConnectScreen from './pages/NoConnectScreen';
 import KakoConnectScreen from './pages/KakoConnectScreen';
-const Stack = createNativeStackNavigator();
+import MainScreen from './pages/MainScreen';
 
+const Stack = createNativeStackNavigator();
 
 const Flex = () => {
   return (
@@ -248,6 +249,7 @@ const Flex = () => {
             {/* <Stack.Screen name="MainScreen" component={MainScreen} /> */}
             <Stack.Screen name="KakaoConnectScreen" component={KakoConnectScreen}/>
             <Stack.Screen name="NoConnectScreen" component={NoConnectScreen}/> 
+            <Stack.Screen name="MainScreen" component={MainScreen}/> 
         </Stack.Navigator>
   </NavigationContainer>
     
