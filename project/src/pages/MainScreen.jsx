@@ -11,24 +11,42 @@ function MainScreen({ navigation }) {
         <Text style={styles.title_yellow}>메인 페이지{"\n"}암튼 로고</Text>
         </SafeAreaView>
         <SafeAreaView style={styles.container}>
-            <TouchableOpacity onPress={() => navigation.navigate('InformFunction_Recycle')} style={styles.buttonCircle_yellow}>
-                <Text style={styles.buttonText_small}>분리수거함{"\n"}카메라</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
-                <Text style={styles.buttonText_small}>쓰레기{"\n"}카메라</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
-                <Text style={styles.buttonText_small}>폐가전제품{"\n"}폐기 신청</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
-                <Text style={styles.buttonText_small}>대형쓰레기{"\n"}폐기 신청</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
-                <Text style={styles.buttonText_small}>쓰레기{"\n"}대백과</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
-                <Text style={styles.buttonText_small}>사용법</Text>
-            </TouchableOpacity>
+            <SafeAreaView style={styles.innercontainer}>
+                <SafeAreaView style={styles.nestedcontainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('InformFunction_Recycle')} style={styles.buttonCircle_yellow_left}>
+                        <Text style={styles.buttonText_small}>분리수거함{"\n"}카메라</Text>
+                    </TouchableOpacity>
+                </SafeAreaView>
+                <SafeAreaView style={styles.nestedcontainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
+                        <Text style={styles.buttonText_small}>쓰레기{"\n"}카메라</Text>
+                    </TouchableOpacity>
+                </SafeAreaView>
+            </SafeAreaView>
+            <SafeAreaView style={styles.innercontainer}>
+                <SafeAreaView style={styles.nestedcontainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow_left}>
+                        <Text style={styles.buttonText_small}>폐가전제품{"\n"}폐기 신청</Text>
+                    </TouchableOpacity>
+                </SafeAreaView>
+                <SafeAreaView style={styles.nestedcontainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
+                        <Text style={styles.buttonText_small}>대형쓰레기{"\n"}폐기 신청</Text>
+                    </TouchableOpacity>
+                </SafeAreaView>
+            </SafeAreaView>
+            <SafeAreaView style={styles.innercontainer}>
+                <SafeAreaView style={styles.nestedcontainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow_left}>
+                        <Text style={styles.buttonText_small}>쓰레기{"\n"}대백과</Text>
+                    </TouchableOpacity>
+                </SafeAreaView>
+                <SafeAreaView style={styles.nestedcontainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
+                        <Text style={styles.buttonText_small}>사용법</Text>
+                    </TouchableOpacity>
+                </SafeAreaView>
+            </SafeAreaView>
         </SafeAreaView>
     </SafeAreaView>
   );
@@ -36,17 +54,30 @@ function MainScreen({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      flexWrap: "wrap",
-      flexDirection: "row",
-      justifyContent: "center",
-      alignContent: "center",
+      width: "80%",
+      height: "70%",
+      justifyContent: "space-between",
+      alignItems: "center",
+    },
+    innercontainer: {
+        width: "90%",
+        height: "30%",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignContent: "space-around",
+    },
+    nestedcontainer: {
+        width: "46%",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignContent: "center",
     },
     titleContainer: {
       flexWrap: "wrap",
       flexDirection: "row",
       justifyContent: "center",
       alignContent: "center",
+      marginBottom: 20,
     },
     backgroundContainerMain: {
         flex: 1,
@@ -111,19 +142,29 @@ const styles = StyleSheet.create({
         margin: 10,
     },
     buttonCircle_yellow: {
-        minWidth: "30%",
-        minHeight: "30%",
+        width: "40%",
+        height: "100%",
         flexGrow: 1,
         flexShrink: 0,
         flexBasis: "auto",
         backgroundColor: "#FAFF00",
-        borderRadius: 100,
+        borderRadius: 10000,
         borderColor: "#B7C712",
         borderWidth: 5,
         justifyContent: "center",
-        margin: 10,
-        paddingVertical: 12,
-        paddingHorizontal: 12,
+    },
+    buttonCircle_yellow_left: {
+        width: "40%",
+        height: "100%",
+        flexGrow: 1,
+        flexShrink: 0,
+        flexBasis: "auto",
+        backgroundColor: "#FAFF00",
+        borderRadius: 10000,
+        borderColor: "#B7C712",
+        borderWidth: 5,
+        justifyContent: "center",
+        // marginRight: 10,
     },
     buttonBox_white: {
       elevation: 8,

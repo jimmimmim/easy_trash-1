@@ -6,6 +6,9 @@ import { StyleSheet, TouchableOpacity, Button, Text,SafeAreaView,
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import indStyle from '../styles/LandingScreenStyle';
+import button from '../styles/Button';
+import text from '../styles/Text';
+
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 import {GestureHandlerRootView } from 'react-native-gesture-handler';
 
