@@ -48,6 +48,17 @@ const Layout = StyleSheet.create({
       alignContent: "center",
       marginBottom: 20,
     },
+    brailleContainer: {
+        width:400, 
+        height:200,
+        marginTop:-300,
+        marginBottom:100,
+        // backgroundColor:'none',
+        borderColor: '#FAFF00',
+        borderWidth: 2,
+        borderLeftWidth: 0,
+        borderRightWidth: 0,
+    }
 });
 
 
