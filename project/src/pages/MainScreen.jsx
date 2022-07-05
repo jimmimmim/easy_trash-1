@@ -104,8 +104,8 @@ const styles = StyleSheet.create({
         margin: 10,
     },
     buttonCircle_yellow: {
-        width: 150,
-        height: 150,
+        width: 120,
+        height: 120,
         backgroundColor: "#FAFF00",
         borderRadius: 100,
         borderColor: "#B7C712",
