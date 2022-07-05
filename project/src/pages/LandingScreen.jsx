@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StyleSheet, TouchableOpacity, Button, Text, View } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import indStyle from '../component/LandingScreenStyle'
+import indStyle from '../styles/LandingScreenStyle'
 function LandingScreen({ onPress, navigation }) {
     return (
       <View style={styles.backgroundContainerMain}>
