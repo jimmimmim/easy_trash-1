@@ -7,7 +7,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 function MainScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.backgroundContainerMain}>
+        <SafeAreaView style={styles.titleContainer}>
         <Text style={styles.title_yellow}>메인 페이지{"\n"}암튼 로고</Text>
+        </SafeAreaView>
         <SafeAreaView style={styles.container}>
             <TouchableOpacity onPress={() => navigation.navigate('InformFunction_Recycle')} style={styles.buttonCircle_yellow}>
                 <Text style={styles.buttonText_small}>분리수거함{"\n"}카메라</Text>
@@ -35,6 +37,12 @@ function MainScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
+      flexWrap: "wrap",
+      flexDirection: "row",
+      justifyContent: "center",
+      alignContent: "center",
+    },
+    titleContainer: {
       flexWrap: "wrap",
       flexDirection: "row",
       justifyContent: "center",
@@ -103,8 +111,8 @@ const styles = StyleSheet.create({
         margin: 10,
     },
     buttonCircle_yellow: {
-        minWidth: "33%",
-        minHeight: "33%",
+        minWidth: "30%",
+        minHeight: "30%",
         flexGrow: 1,
         flexShrink: 0,
         flexBasis: "auto",
