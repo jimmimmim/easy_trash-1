@@ -3,8 +3,6 @@ import { StyleSheet, TouchableOpacity, Button, Text,SafeAreaView,
   View,
   StatusBar,
   FlatList } from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
