@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { StyleSheet, TouchableOpacity, Button, Text, View } from "react-native";
+import { StyleSheet, TouchableOpacity, Button, Text, View, SafeAreaView  } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // 메인 페이지 (버튼 6개)
 function MainScreen({ navigation }) {
   return (
-    <View style={styles.backgroundContainerMain}>
-        <Text style={styles.title_yellow}>메인 페이지{"\n"}암튼 로고</Text> 
-        <View style={styles.container}>
+    <SafeAreaView style={styles.backgroundContainerMain}>
+        <Text style={styles.title_yellow}>메인 페이지{"\n"}암튼 로고</Text>
+        <SafeAreaView style={styles.container}>
             <TouchableOpacity onPress={() => navigation.navigate('InformFunction_Recycle')} style={styles.buttonCircle_yellow}>
                 <Text style={styles.buttonText_small}>분리수거함{"\n"}카메라</Text>
             </TouchableOpacity>
@@ -27,9 +27,8 @@ function MainScreen({ navigation }) {
             <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonCircle_yellow}>
                 <Text style={styles.buttonText_small}>사용법</Text>
             </TouchableOpacity>
-        </View>
-        
-    </View>
+        </SafeAreaView>
+    </SafeAreaView>
   );
 }
 
@@ -42,10 +41,10 @@ const styles = StyleSheet.create({
       alignContent: "center",
     },
     backgroundContainerMain: {
-      flex: 1,
-      backgroundColor: '#2A4747',
-      justifyContent: 'center',
-      alignItems: 'center',
+        flex: 1,
+        backgroundColor: '#2A4747',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     backgroundContainer: {
       flex: 1,
@@ -104,8 +103,11 @@ const styles = StyleSheet.create({
         margin: 10,
     },
     buttonCircle_yellow: {
-        width: 120,
-        height: 120,
+        minWidth: "33%",
+        minHeight: "33%",
+        flexGrow: 1,
+        flexShrink: 0,
+        flexBasis: "auto",
         backgroundColor: "#FAFF00",
         borderRadius: 100,
         borderColor: "#B7C712",
