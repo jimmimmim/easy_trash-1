@@ -4,6 +4,8 @@ import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
 
+import Tts from 'react-native-tts';
+
 // 사용법
 function BigTrashScreen({ navigation }) {
   return (
