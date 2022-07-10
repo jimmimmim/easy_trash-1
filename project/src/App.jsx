@@ -39,7 +39,7 @@ const Flex = () => {
             <Stack.Screen name="MainScreen" component={MainScreen} />
             <Stack.Screen name="KakaoConnectScreen" component={KakaoConnectScreen}/>
             <Stack.Screen name="NoConnectScreen" component={NoConnectScreen}/> 
-        </Stack.Navigator>
+                  </Stack.Navigator>
   </NavigationContainer>
     
   );

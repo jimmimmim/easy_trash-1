@@ -13,7 +13,7 @@ function HowtoConnectKakao({ navigation }) {
       <Text style={styles.text_yellow}>안내문 텍스트</Text>
 
       {/* Landing button */}
-      <TouchableOpacity onPress={() => navigation.navigate('CreateWallet')} style={styles.buttonBox_yellow}>
+      <TouchableOpacity onPress={() => navigation.navigate('KakaoConnectScreen')} style={styles.buttonBox_yellow}>
           <Text style={styles.buttonText_small}>카카오계정 연결하기</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate('NoConnectScreen')} style={styles.buttonBox_yellow}>
