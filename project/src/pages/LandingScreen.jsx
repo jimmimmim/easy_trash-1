@@ -10,6 +10,8 @@ import text from '../styles/Text';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 import {GestureHandlerRootView } from 'react-native-gesture-handler';
 
+
+
 const LeftSwipeActions = () => {
   return (
     <View>
@@ -32,17 +34,25 @@ const rightSwipeActions = () => {
 };
 const swipeFromLeftOpen = () => {
   alert('Swipe from left'); //이거 할 때 음성 중지
+
 };
 const swipeFromRightOpen = () => {
   alert('Swipe from right'); //이거 할 때 음성 실행
+
 };
+
+const removeSlideButton = () => {
+
+
+}
 
 const Item = () => (
   <GestureHandlerRootView>
   <Swipeable
     renderLeftActions={LeftSwipeActions}
     onSwipeableLeftOpen={swipeFromLeftOpen}
-    onSwipeableWillClose={swipeFromRightOpen}
+    overshootRight={false}
+    overshootLeft={false}
   >
     <View
       style={{
@@ -54,18 +64,16 @@ const Item = () => (
         margin:10
       }}
     >
-      <Text style={{ fontSize: 24 }}>
-        냉
-      </Text>
     </View>
   </Swipeable>
   </GestureHandlerRootView>
 );
 
-function LandingScreen({ onPress, navigation }) {
+function LandingScreen({ onPress, navigation}) {
     return (
       <View style={layout.backgroundContainerMain}>
-        <SafeAreaView style={layout.brailleContainer}/>
+        <SafeAreaView style={layout.brailleContainer}>  
+        </SafeAreaView>
         <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={button.buttonBox_yellow}>
             <Text style={text.buttonText}>시작하기</Text>
         </TouchableOpacity>
