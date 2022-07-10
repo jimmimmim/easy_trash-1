@@ -4,6 +4,16 @@ import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
 
+import Tts from "react-native-tts";
+
+const onPressSpeech = () => {
+  alert('TTS 시작');
+  // Tts.stop();
+  // Tts.speak('Hello, world!');
+  // Tts.stop();
+  alert('TTS 끝');
+};
+
 // 사용법
 function TTSExampleScreen({ navigation }) {
   
@@ -17,7 +27,7 @@ function TTSExampleScreen({ navigation }) {
       </TouchableOpacity>
 
       <Text style={text.text_yellow}>사용법</Text>
-      <TouchableOpacity onPress={() => alert('카메라 연결')} style={button.buttonBox_yellow}>
+      <TouchableOpacity onPress={onPressSpeech} style={button.buttonBox_yellow}>
           <Text style={text.buttonText_small}>TTS 사용하기</Text>
       </TouchableOpacity>
     </View>
