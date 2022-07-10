@@ -17,7 +17,7 @@ function BigTrashScreen({ navigation }) {
           <Text style={text.buttonText_small}>기능 안내</Text>
       </TouchableOpacity>
 
-      <Text style={text.text_yellow}>사용법</Text>
+      <Text style={text.text_yellow}>사용법{"\n"}220710</Text>
       <TouchableOpacity onPress={() => alert('카메라 연결')} style={button.buttonBox_yellow}>
           <Text style={text.buttonText_small}>사용하기</Text>
       </TouchableOpacity>
