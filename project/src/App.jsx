@@ -15,6 +15,7 @@ import BigTrashScreen from './pages/BigTrashScreen';
 import HomeAppTrashScreen from './pages/HomeAppTrashScreen';
 import TrashpediaScreen from './pages/TrashpediaScreen';
 import TutorialScreen from './pages/TutorialScreen';
+import TTSExampleScreen from './pages/ttsExampleScreen';
 import MainScreen from './pages/MainScreen';
 
 const Stack = createNativeStackNavigator();
@@ -35,6 +36,7 @@ const Flex = () => {
             <Stack.Screen name="TrashpediaScreen" component={TrashpediaScreen}/>
             <Stack.Screen name="HomeAppTrashScreen" component={HomeAppTrashScreen}/>
             <Stack.Screen name="TutorialScreen" component={TutorialScreen}/>
+            <Stack.Screen name="TTSExampleScreen" component={TTSExampleScreen}/>
             <Stack.Screen name="HowtoConnectKakao" component={HowtoConnectKakao}/>
             <Stack.Screen name="MainScreen" component={MainScreen} />
             <Stack.Screen name="KakaoConnectScreen" component={KakaoConnectScreen}/>
