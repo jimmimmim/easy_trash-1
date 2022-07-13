@@ -16,7 +16,7 @@ function InformFunction_Recycle({ navigation }) {
       </TouchableOpacity>
 
       <Text style={styles.text_yellow}>분리수거함 카메라 기능 설명{"\n"}텍스트</Text>
-      <TouchableOpacity onPress={() => alert('카메라 연결')} style={styles.buttonBox_yellow}>
+      <TouchableOpacity onPress={() => navigation.navigate('ImageUpload')} style={styles.buttonBox_yellow}>
           <Text style={styles.buttonText_small}>사용하기</Text>
       </TouchableOpacity>
     </View>

@@ -14,7 +14,7 @@ function MainScreen({ navigation }) {
         <SafeAreaView style={layout.container}>
             <SafeAreaView style={layout.innercontainer}>
                 <SafeAreaView style={layout.nestedcontainer}>
-                    <TouchableOpacity onPress={() => navigation.navigate('InformFunction_Recycle')} style={button.buttonCircle_yellow_left}>
+                    <TouchableOpacity onPress={() => navigation.navigate('ImageUpload')} style={button.buttonCircle_yellow_left}>
                         <Text style={text.buttonText_small}>분리수거함{"\n"}카메라</Text>
                     </TouchableOpacity>
                 </SafeAreaView>

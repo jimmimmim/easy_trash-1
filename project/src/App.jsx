@@ -4,6 +4,7 @@ import { StyleSheet, TouchableOpacity, Button, Text, View } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import ImageUpload from './pages/imageUpload';
 import LandingScreen from './pages/LandingScreen';
 import CreateWalletScreen from './pages/CreateWalletScreen';
 import HowtoConnectKakao from './pages/HowtoConnectKakao';
@@ -41,6 +42,7 @@ const Flex = () => {
             <Stack.Screen name="MainScreen" component={MainScreen} />
             <Stack.Screen name="KakaoConnectScreen" component={KakaoConnectScreen}/>
             <Stack.Screen name="NoConnectScreen" component={NoConnectScreen}/> 
+            <Stack.Screen name="ImageUpload" component={ImageUpload}/> 
                   </Stack.Navigator>
   </NavigationContainer>
     

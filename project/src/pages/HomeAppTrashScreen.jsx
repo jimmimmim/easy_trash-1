@@ -16,7 +16,7 @@ function HomeAppTrashScreen({ navigation }) {
       </TouchableOpacity>
 
       <Text style={text.text_yellow}>폐가전제품</Text>
-      <TouchableOpacity onPress={() => alert('카메라 연결')} style={button.buttonBox_yellow}>
+      <TouchableOpacity onPress={() => navigation.navigate('ImageUpload')} style={button.buttonBox_yellow}>
           <Text style={text.buttonText_small}>사용하기</Text>
       </TouchableOpacity>
     </View>
