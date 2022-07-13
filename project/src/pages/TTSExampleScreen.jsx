@@ -4,7 +4,7 @@ import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
 
-import Tts from "react-native-tts";
+//import Tts from "react-native-tts";
 
 const onPressSpeech = () => {
   alert('TTS 시작');

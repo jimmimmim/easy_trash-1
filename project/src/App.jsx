@@ -9,13 +9,13 @@ import CreateWalletScreen from './pages/CreateWalletScreen';
 import HowtoConnectKakao from './pages/HowtoConnectKakao';
 import NoConnectScreen from './pages/NoConnectScreen';
 import KakaoConnectScreen from './pages/KakaoConnectScreen';
-import InformFunction_Recycle from './pages/InformFunction_Recycle';
-import TrashCamScreen from './pages/TrashCamScreen';
-import BigTrashScreen from './pages/BigTrashScreen';
-import HomeAppTrashScreen from './pages/HomeAppTrashScreen';
-import TrashpediaScreen from './pages/TrashpediaScreen';
-import TutorialScreen from './pages/TutorialScreen';
-import TTSExampleScreen from './pages/ttsExampleScreen';
+// import InformFunction_Recycle from './pages/InformFunction_Recycle';
+// import TrashCamScreen from './pages/TrashCamScreen';
+// import BigTrashScreen from './pages/BigTrashScreen';
+// import HomeAppTrashScreen from './pages/HomeAppTrashScreen';
+// import TrashpediaScreen from './pages/TrashpediaScreen';
+// import TutorialScreen from './pages/TutorialScreen';
+// import TTSExampleScreen from './pages/ttsExampleScreen';
 import MainScreen from './pages/MainScreen';
 
 const Stack = createNativeStackNavigator();
@@ -30,13 +30,13 @@ const Flex = () => {
                 component={CreateWalletScreen} 
                 /*options={{ title: 'Account' }}*/
             />
-            <Stack.Screen name="InformFunction_Recycle" component={InformFunction_Recycle}/>
+            {/* <Stack.Screen name="InformFunction_Recycle" component={InformFunction_Recycle}/>
             <Stack.Screen name="TrashCamScreen" component={TrashCamScreen}/>
             <Stack.Screen name="BigTrashScreen" component={BigTrashScreen}/>
             <Stack.Screen name="TrashpediaScreen" component={TrashpediaScreen}/>
             <Stack.Screen name="HomeAppTrashScreen" component={HomeAppTrashScreen}/>
             <Stack.Screen name="TutorialScreen" component={TutorialScreen}/>
-            <Stack.Screen name="TTSExampleScreen" component={TTSExampleScreen}/>
+            <Stack.Screen name="TTSExampleScreen" component={TTSExampleScreen}/> */}
             <Stack.Screen name="HowtoConnectKakao" component={HowtoConnectKakao}/>
             <Stack.Screen name="MainScreen" component={MainScreen} />
             <Stack.Screen name="KakaoConnectScreen" component={KakaoConnectScreen}/>
