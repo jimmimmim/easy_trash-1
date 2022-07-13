@@ -7,17 +7,14 @@ import text from '../styles/Text';
 import * as Speech from 'expo-speech';
 
 const speak = props => {
-
-    alert(props.content);
-
-    Speech.speak("한국말도 할 수 있을까?", {
+    Speech.speak(props.content, {
        language: 'ko',
     });
 };
 
 const TTSButton = props => {
     return(
-        <TouchableOpacity onPress={speak} style={button.buttonBox_yellow}>
+        <TouchableOpacity onPress={speak(props)} style={button.buttonBox_yellow}>
            <Text style={text.buttonText_small}>{props.content}</Text>
         </TouchableOpacity>
     );

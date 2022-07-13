@@ -27,17 +27,9 @@ function TTSExampleScreen({ navigation }) {
       <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={button.buttonBox_yellow}>
           <Text style={text.buttonText_small}>이전으로</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => alert('기능안내 음성')} style={button.buttonBox_yellow}>
-          <Text style={text.buttonText_small}>TTS 기능 안내</Text>
-      </TouchableOpacity>
-
+      <TTSButton content="TTS 기능 안내" />
       <Text style={text.text_yellow}>사용법</Text>
-      <TouchableOpacity onPress={speak} style={button.buttonBox_yellow}>
-          <Text style={text.buttonText_small}>TTS 사용하기</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={speak} style={button.buttonBox_yellow}>
-          <TTSText content="우왕" />
-      </TouchableOpacity>
+      <TTSButton content="우왕우왕" />
       <TTSButton content="읽어준당" />
     </View>
   );
