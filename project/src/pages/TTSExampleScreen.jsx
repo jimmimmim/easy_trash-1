@@ -3,15 +3,20 @@ import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
+import TTSText from '../components/TTSText';
+import TTSButton from '../components/TTSButton';
 
-//import Tts from "react-native-tts";
+import * as Speech from 'expo-speech';
 
-const onPressSpeech = () => {
-  alert('TTS 시작');
-  // Tts.stop();
-  // Tts.speak('Hello, world!');
-  // Tts.stop();
-  alert('TTS 끝');
+const EXAMPLES = [
+  { language: 'en', text: 'Adam Perry ate a pear in pairs in Paris' },
+  { language: 'ko', text: '한국말을 배우고 있어요'},
+];
+
+const speak = () => {
+    Speech.speak("한국말도 할 수 있을까?", {
+          language: 'ko',
+    });
 };
 
 // 사용법
@@ -27,9 +32,13 @@ function TTSExampleScreen({ navigation }) {
       </TouchableOpacity>
 
       <Text style={text.text_yellow}>사용법</Text>
-      <TouchableOpacity onPress={onPressSpeech} style={button.buttonBox_yellow}>
+      <TouchableOpacity onPress={speak} style={button.buttonBox_yellow}>
           <Text style={text.buttonText_small}>TTS 사용하기</Text>
       </TouchableOpacity>
+      <TouchableOpacity onPress={speak} style={button.buttonBox_yellow}>
+          <TTSText content="우왕" />
+      </TouchableOpacity>
+      <TTSButton content="읽어준당" />
     </View>
   );
 }
