@@ -1,5 +1,5 @@
 import ImagePickerComponent from "../../imagePickerComponent";
-import callGoogleVisionAsync from "../../helperFunctions";
+import callGoogleVisionAsync from "../../helperOCRFunctions";
 import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import layout from '../styles/Layout';
 import button from '../styles/Button';

@@ -1,24 +1,78 @@
-import * as React from 'react';
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import { StyleSheet, TouchableOpacity, Text, View,Button, Image} from "react-native";
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
-
-// 쓰레기 카메라
+import * as React from 'react';
+import * as ImagePicker from 'expo-image-picker';
 function TrashCamScreen({ navigation }) {
+  const [image, setImage] = React.useState(null);
+  const [status, setStatus] = React.useState(null);
+
+
+  const API_KEY = 'AIzaSyAx9LPUPnfinGPBv9eO6O6yNGCUJ8kgUOA';
+  const API_URL = `https://vision.googleapis.com/v1/images:annotate?key=${API_KEY}`;
+  
+  async function callGoogleVisionAsync(image) {
+    const body = {
+      requests: [
+        {
+          image: {
+            content: image,
+          },
+          features: [
+            {
+              type: 'LABEL_DETECTION',
+              maxResults: 1,
+            },
+          ],
+        },
+      ],
+    };
+  
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+    const result = await response.json();
+    console.log('callGoogleVisionAsync -> result', result);
+  
+    return result.responses[0].labelAnnotations[0].description;
+  }
+
+  const takePictureAsync = async () => {
+    const { cancelled, uri, base64 } = await ImagePicker.launchCameraAsync({
+      base64: true,
+    });
+
+    if (!cancelled) {
+      setImage(uri);
+      setStatus('Loading...');
+      try {
+        
+        const result = await callGoogleVisionAsync(base64);
+setStatus(result);
+
+      } catch (error) {
+        setStatus(`Error: ${error.message}`);
+      }
+    } else {
+      setImage(null);
+      setStatus(null);
+    }
+  };
   return (
     <View style={layout.backgroundContainerMain}>
-      <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={button.buttonBox_yellow}>
-          <Text style={text.buttonText_small}>이전으로</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => alert('기능안내 음성')} style={button.buttonBox_yellow}>
-          <Text style={text.buttonText_small}>기능 안내</Text>
-      </TouchableOpacity>
 
-      <Text style={text.text_yellow}>쓰레기{"\n"}카메라</Text>
-      <TouchableOpacity onPress={() => alert('카메라 연결')} style={button.buttonBox_yellow}>
-          <Text style={text.buttonText_small}>사용하기</Text>
-      </TouchableOpacity>
+<TouchableOpacity onPress={takePictureAsync} style={[button.buttonBox_yellow,{flex:0.3}]}>
+            <Text style={text.buttonText_small}>사진찍기</Text>
+        </TouchableOpacity>
+        {image && <Image  style={{ width: 200, height: 200, resizeMode:"contain" }} source={{ uri: image }} />}
+{status && <Text >{status}</Text>}
+
     </View>
   );
 }
