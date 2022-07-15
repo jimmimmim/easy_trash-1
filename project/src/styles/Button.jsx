@@ -51,6 +51,17 @@ const Button = StyleSheet.create({
         paddingHorizontal: 50,
         margin: 10,
     },
+    buttonCircle_yellow_center: {
+        height: '30%',
+        flexGrow: 1,
+        flexShrink: 0,
+        margin: 10,
+        backgroundColor: "#FAFF00",
+        borderRadius: 10000,
+        borderColor: "#B7C712",
+        borderWidth: 5,
+        justifyContent: "center",
+    },
     buttonCircle_yellow: {
         width: "40%",
         height: "100%",

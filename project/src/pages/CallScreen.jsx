@@ -22,13 +22,13 @@ const call = (name) => {
             Linking.openURL(`tel:0222903100`);
             break;
         default:
-            Linking.openURL(`tel:01012341234`);
+            Linking.openURL(`tel:0222481001`);
             break;
     };
 };
 
 // 대형폐기물
-function BigTrashScreen({ navigation }) {
+function CallScreen({ navigation }) {
   return (
     <View style={layout.backgroundContainerMain}>
       <View style={layout.twoButtonContainer}>
@@ -41,18 +41,14 @@ function BigTrashScreen({ navigation }) {
       </View>
       <View style={layout.twoCircleContainer}>
         <View style={layout.innerCircleContainer}>
-          <TouchableOpacity onPress={() => navigation.navigate('CallScreen')} style={button.buttonCircle_yellow_center}>
-              <Text style={text.buttonText_small}>전화걸기</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={layout.innerCircleContainer}>
-          <TouchableOpacity onPress={() => call('성동종합사회복지관')} style={button.buttonCircle_yellow_center}>
-              <Text style={text.buttonText_small}>성동종합사회복지관</Text>
-          </TouchableOpacity>
+              <Text style={text.text_yellow}>전화 절차 안내 텍스트</Text>
         </View>
       </View>
+      <TouchableOpacity onPress={() => call()} style={button.buttonBox_yellow}>
+        <Text style={text.buttonText_small}>신청하기</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 
-export default BigTrashScreen;
+export default CallScreen;

@@ -1,0 +1,687 @@
+{
+  "categories": [
+    {
+      "category": "category",
+      "price": "price"
+    },
+    {
+      "category": "높이 50cm 미만 거울",
+      "price": "1000"
+    },
+    {
+      "category": "책상 유리 크기 이하 깨진 유리",
+      "price": "1000"
+    },
+    {
+      "category": "나무 판자",
+      "price": "1000"
+    },
+    {
+      "category": "정수만 나오는 정수기",
+      "price": "1000"
+    },
+    {
+      "category": "다림질 판",
+      "price": "1000"
+    },
+    {
+      "category": "3.3제곱센치미터당 돗자리",
+      "price": "1000"
+    },
+    {
+      "category": "목욕탕 수건함",
+      "price": "1000"
+    },
+    {
+      "category": "1폭당 병풍",
+      "price": "1000"
+    },
+    {
+      "category": "소형 벽시계",
+      "price": "1000"
+    },
+    {
+      "category": "소형 스탠드 시계",
+      "price": "1000"
+    },
+    {
+      "category": "인라인",
+      "price": "1000"
+    },
+    {
+      "category": "긴 장화",
+      "price": "1000"
+    },
+    {
+      "category": "긴 부츠",
+      "price": "1000"
+    },
+    {
+      "category": "소형 쓰레기통",
+      "price": "1000"
+    },
+    {
+      "category": "소형 아이스박스",
+      "price": "1000"
+    },
+    {
+      "category": "넓이 5제곱미터 미만 액자",
+      "price": "1000"
+    },
+    {
+      "category": "우산",
+      "price": "1000"
+    },
+    {
+      "category": "유아용 목마",
+      "price": "1000"
+    },
+    {
+      "category": "소형 장난감",
+      "price": "1000"
+    },
+    {
+      "category": "3.3제곱미터당 재활용 불가 장판",
+      "price": "1000"
+    },
+    {
+      "category": "조명기구",
+      "price": "1000"
+    },
+    {
+      "category": "5킬로그램당 폐목재",
+      "price": "1000"
+    },
+    {
+      "category": "5킬로그램당 폐플라스틱",
+      "price": "1000"
+    },
+    {
+      "category": "높이 30센치미터 미만 항아리",
+      "price": "1000"
+    },
+    {
+      "category": "1개당 화분",
+      "price": "1000"
+    },
+    {
+      "category": "가로 50센치미터 미만 가방",
+      "price": "2000"
+    },
+    {
+      "category": "높이 50센치미터 미만 거울",
+      "price": "2000"
+    },
+    {
+      "category": "소형 금고",
+      "price": "2000"
+    },
+    {
+      "category": "베란다 유리 크기 미만 깨진 유리",
+      "price": "2000"
+    },
+    {
+      "category": "소형 마네킹",
+      "price": "2000"
+    },
+    {
+      "category": "밥상",
+      "price": "2000"
+    },
+    {
+      "category": "다과상",
+      "price": "2000"
+    },
+    {
+      "category": "보행기",
+      "price": "2000"
+    },
+    {
+      "category": "빨래건조대",
+      "price": "2000"
+    },
+    {
+      "category": "세발자전거",
+      "price": "2000"
+    },
+    {
+      "category": "온수기",
+      "price": "2000"
+    },
+    {
+      "category": "식기건조기",
+      "price": "2000"
+    },
+    {
+      "category": "높이 120센치미터 미만 신발장",
+      "price": "2000"
+    },
+    {
+      "category": "대형 쓰레기통",
+      "price": "2000"
+    },
+    {
+      "category": "대형 아이스박스",
+      "price": "2000"
+    },
+    {
+      "category": "안마기",
+      "price": "2000"
+    },
+    {
+      "category": "마사지기",
+      "price": "2000"
+    },
+    {
+      "category": "넓이 5제곱미터 이상 액자",
+      "price": "2000"
+    },
+    {
+      "category": "옷걸이",
+      "price": "2000"
+    },
+    {
+      "category": "행거",
+      "price": "2000"
+    },
+    {
+      "category": "유모차",
+      "price": "2000"
+    },
+    {
+      "category": "유아용 자동차",
+      "price": "2000"
+    },
+    {
+      "category": "이불",
+      "price": "2000"
+    },
+    {
+      "category": "대형 장난감",
+      "price": "2000"
+    },
+    {
+      "category": "전기장판",
+      "price": "2000"
+    },
+    {
+      "category": "1제곱미터당 파티션",
+      "price": "2000"
+    },
+    {
+      "category": "2단이하 책꽂이",
+      "price": "2000"
+    },
+    {
+      "category": "팬히터",
+      "price": "2000"
+    },
+    {
+      "category": "높이 30센치미터 이상 항아리",
+      "price": "2000"
+    },
+    {
+      "category": "협탁",
+      "price": "2000"
+    },
+    {
+      "category": "환풍기",
+      "price": "2000"
+    },
+    {
+      "category": "휠체어",
+      "price": "2000"
+    },
+    {
+      "category": "50센치미터 미만 고무통",
+      "price": "3000"
+    },
+    {
+      "category": "가로 50센치미터 이상 가방",
+      "price": "3000"
+    },
+    {
+      "category": "베란다 유리 크기 이상 깨진 유리",
+      "price": "3000"
+    },
+    {
+      "category": "난로",
+      "price": "3000"
+    },
+    {
+      "category": "대형 마네킹",
+      "price": "3000"
+    },
+    {
+      "category": "1인용 옥 매트",
+      "price": "3000"
+    },
+    {
+      "category": "1인용 자석 매트",
+      "price": "3000"
+    },
+    {
+      "category": "문짝",
+      "price": "3000"
+    },
+    {
+      "category": "교자상",
+      "price": "3000"
+    },
+    {
+      "category": "4단 이하 서랍장",
+      "price": "3000"
+    },
+    {
+      "category": "대형 선풍기",
+      "price": "3000"
+    },
+    {
+      "category": "스키",
+      "price": "3000"
+    },
+    {
+      "category": "대형 벽시계",
+      "price": "3000"
+    },
+    {
+      "category": "대형 스탠드 시계",
+      "price": "3000"
+    },
+    {
+      "category": "높이 120센티미터 이상 신발장",
+      "price": "3000"
+    },
+    {
+      "category": "싱크대 1폭",
+      "price": "3000"
+    },
+    {
+      "category": "싱크대 찬장 1칸",
+      "price": "3000"
+    },
+    {
+      "category": "쌀통",
+      "price": "3000"
+    },
+    {
+      "category": "66제곱미터 미만 에어컨",
+      "price": "3000"
+    },
+    {
+      "category": "66제곱미터 미만 온풍기",
+      "price": "3000"
+    },
+    {
+      "category": "유아용 욕조",
+      "price": "3000"
+    },
+    {
+      "category": "응접탁자",
+      "price": "3000"
+    },
+    {
+      "category": "1인용 의자",
+      "price": "3000"
+    },
+    {
+      "category": "장식장",
+      "price": "3000"
+    },
+    {
+      "category": "재봉틀",
+      "price": "3000"
+    },
+    {
+      "category": "창문",
+      "price": "3000"
+    },
+    {
+      "category": " 3단 이상 책꽂이",
+      "price": "3000"
+    },
+    {
+      "category": "3.3제곱미터당 카펫",
+      "price": "3000"
+    },
+    {
+      "category": "서랍 없는 책상",
+      "price": "3000"
+    },
+    {
+      "category": "컴퓨터 전용 책상",
+      "price": "3000"
+    },
+    {
+      "category": "2인용 이하 탁자",
+      "price": "3000"
+    },
+    {
+      "category": "48센치미터 미만 텔레비전",
+      "price": "3000"
+    },
+    {
+      "category": "3단 이하 파일 캐비닛",
+      "price": "3000"
+    },
+    {
+      "category": "50cm 이상 고무통",
+      "price": "4000"
+    },
+    {
+      "category": "높이 1m이상 공기청정기",
+      "price": "4000"
+    },
+    {
+      "category": "2드럼 미만 기름 탱크",
+      "price": "4000"
+    },
+    {
+      "category": "130리터 미만 김치냉장고",
+      "price": "4000"
+    },
+    {
+      "category": "두발자전거",
+      "price": "4000"
+    },
+    {
+      "category": "문갑 1짝",
+      "price": "4000"
+    },
+    {
+      "category": "변기",
+      "price": "4000"
+    },
+    {
+      "category": "양변기",
+      "price": "4000"
+    },
+    {
+      "category": "좌변기",
+      "price": "4000"
+    },
+    {
+      "category": "세면대",
+      "price": "4000"
+    },
+    {
+      "category": "10kg 미만 세탁기",
+      "price": "4000"
+    },
+    {
+      "category": "2인용 소파",
+      "price": "4000"
+    },
+    {
+      "category": "6인용 미만 식탁",
+      "price": "4000"
+    },
+    {
+      "category": "싱크대 찬장 2칸",
+      "price": "4000"
+    },
+    {
+      "category": "소형 오락기",
+      "price": "4000"
+    },
+    {
+      "category": "유아용 침대",
+      "price": "4000"
+    },
+    {
+      "category": "소형 의자",
+      "price": "4000"
+    },
+    {
+      "category": "바퀴달린 의자",
+      "price": "4000"
+    },
+    {
+      "category": "일반 캐비닛",
+      "price": "4000"
+    },
+    {
+      "category": "영업용 전기청소기",
+      "price": "4000"
+    },
+    {
+      "category": "4단 이상 파일 캐비닛",
+      "price": "4000"
+    },
+    {
+      "category": "화장대",
+      "price": "4000"
+    },
+    {
+      "category": "높이 1m 이상 가스오븐레인지",
+      "price": "5000"
+    },
+    {
+      "category": "100cm 이상 고무통",
+      "price": "5000"
+    },
+    {
+      "category": "300리터 미만 냉장고",
+      "price": "5000"
+    },
+    {
+      "category": "디지털 피아노",
+      "price": "5000"
+    },
+    {
+      "category": "5단 이상 서랍장",
+      "price": "5000"
+    },
+    {
+      "category": "세단기",
+      "price": "5000"
+    },
+    {
+      "category": "10킬로그램 이상 세탁기",
+      "price": "5000"
+    },
+    {
+      "category": "3인용 소파",
+      "price": "5000"
+    },
+    {
+      "category": "식기세척기",
+      "price": "5000"
+    },
+    {
+      "category": "6인용 이상 식탁",
+      "price": "5000"
+    },
+    {
+      "category": "폭 1m 미만 어항수족관",
+      "price": "5000"
+    },
+    {
+      "category": "대형 의자",
+      "price": "5000"
+    },
+    {
+      "category": "장식장",
+      "price": "5000"
+    },
+    {
+      "category": "편수 책상",
+      "price": "5000"
+    },
+    {
+      "category": "1인용 침대틀(매트리스 별도)",
+      "price": "5000"
+    },
+    {
+      "category": "48cm 이상 텔레비전",
+      "price": "5000"
+    },
+    {
+      "category": "헬스 기구",
+      "price": "5000"
+    },
+    {
+      "category": "1인용 가정용 욕조",
+      "price": "7000"
+    },
+    {
+      "category": "1m 미만 금고",
+      "price": "7000"
+    },
+    {
+      "category": "2드럼 이상 기름 탱크",
+      "price": "7000"
+    },
+    {
+      "category": "300리터 이상 냉장고",
+      "price": "7000"
+    },
+    {
+      "category": "1인용 매트리스",
+      "price": "7000"
+    },
+    {
+      "category": "폭 1m 이상 어항수족관",
+      "price": "7000"
+    },
+    {
+      "category": "66제곱미터 이상 에어컨",
+      "price": "7000"
+    },
+    {
+      "category": "66제곱미터 이상 온풍기",
+      "price": "7000"
+    },
+    {
+      "category": "대형 오락기",
+      "price": "7000"
+    },
+    {
+      "category": "소형 자동 판매기",
+      "price": "7000"
+    },
+    {
+      "category": "양수 책상",
+      "price": "7000"
+    },
+    {
+      "category": "폭 90cm 미만 책장",
+      "price": "7000"
+    },
+    {
+      "category": "2인용 침대틀(매트리스 별도)",
+      "price": "7000"
+    },
+    {
+      "category": "10인용 이상 탁자",
+      "price": "7000"
+    },
+    {
+      "category": "107cm 이상 텔레비전",
+      "price": "7000"
+    },
+    {
+      "category": "가스 보일러",
+      "price": "10000"
+    },
+    {
+      "category": "기름 보일러",
+      "price": "10000"
+    },
+    {
+      "category": "1m 이상 금고",
+      "price": "10000"
+    },
+    {
+      "category": "500리터 이상 냉장고",
+      "price": "10000"
+    },
+    {
+      "category": "2인용 매트리스",
+      "price": "10000"
+    },
+    {
+      "category": "4인용 이상 소파",
+      "price": "10000"
+    },
+    {
+      "category": "264제곱미터 이상 에어컨",
+      "price": "10000"
+    },
+    {
+      "category": "264제곱미터 이상 온풍기",
+      "price": "10000"
+    },
+    {
+      "category": "1인용 옥침대",
+      "price": "10000"
+    },
+    {
+      "category": "1인용 황토침대",
+      "price": "10000"
+    },
+    {
+      "category": "폭 90cm 미만 장롱 ",
+      "price": "10000"
+    },
+    {
+      "category": "폭 90cm 이상 책장",
+      "price": "10000"
+    },
+    {
+      "category": "업소용 소형 냉장고",
+      "price": "12000"
+    },
+    {
+      "category": "복사기",
+      "price": "12000"
+    },
+    {
+      "category": "프린터",
+      "price": "12000"
+    },
+    {
+      "category": "폭 90cm 이상 장롱 1쪽",
+      "price": "16000"
+    },
+    {
+      "category": "FRP 5드럼 미만 물탱크",
+      "price": "16000"
+    },
+    {
+      "category": "대형 자동판매기",
+      "price": "16000"
+    },
+    {
+      "category": "폭 120cm 이상 장롱 1쪽",
+      "price": "16000"
+    },
+    {
+      "category": "2인용 옥침대",
+      "price": "16000"
+    },
+    {
+      "category": "2인용 황토침대",
+      "price": "16000"
+    },
+    {
+      "category": "700리터 이상 냉장고",
+      "price": "20000"
+    },
+    {
+      "category": "업소용 대형 냉장고",
+      "price": "20000"
+    },
+    {
+      "category": "러닝머신",
+      "price": "20000"
+    },
+    {
+      "category": "FRP 5드럼 이상 물탱크",
+      "price": "20000"
+    },
+    {
+      "category": "피아노",
+      "price": "20000"
+    }]
+}
