@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83aba9f0-f4fa-4d11-a2f3-371b77275f15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/data/Category_Notice.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/data/Category_price.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/data/쉬운 쓰레기_쓰레기 배출 방법 - 전체 .csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/CallScreen.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/TTSText.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/TTSText.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/BigTrashScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/BigTrashScreen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/CreateWalletScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/CreateWalletScreen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/NoConnectScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/NoConnectScreen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/TTSExampleScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/TTSExampleScreen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/TrashpediaScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/TrashpediaScreen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/styles/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/styles/Button.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/styles/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/styles/Layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/project/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
