@@ -32,7 +32,7 @@ function CallScreen({ navigation }) {
   return (
     <View style={layout.backgroundContainerMain}>
       <View style={layout.twoButtonContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={button.buttonBox_yellow}>
+        <TouchableOpacity onPress={() => navigation.navigate('BigTrashScreen')} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>이전으로</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => alert('기능안내 음성')} style={button.buttonBox_yellow}>

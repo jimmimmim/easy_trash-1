@@ -52,8 +52,6 @@ const Layout = StyleSheet.create({
         justifyContent: "center",
         alignContent: "center",
         alignItems: 'center',
-//         borderColor: 'blue',
-//         borderWidth: 3,
     },
     innerCircleContainer: {
         flex: 1,
@@ -69,6 +67,14 @@ const Layout = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignContent: "center",
+    },
+    searchContainer: {
+        flex: 1,
+        width: "90%",
+        borderColor: 'green',
+        borderWidth: 3,
+        flexDirection: "column",
+//         justifyContent: "center",
     },
     swipebar:{
         backgroundColor:'#FAFF00',
