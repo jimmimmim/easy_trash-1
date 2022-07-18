@@ -134,9 +134,12 @@ function TrashpediaScreen({ navigation }) {
           style={{backgroundColor: '#FFF'}}
         />
       </View>
+      <TouchableOpacity onPress={() => navigation.navigate('SearchResultScreen')} style={button.buttonBox_yellow}>
+        <Text style={text.buttonText_small}>검색</Text>
+      </TouchableOpacity>
       <Text style={text.text_yellow}>쓰레기 대백과 페이지</Text>
-      <TouchableOpacity onPress={() => call()} style={button.buttonBox_yellow}>
-        <Text style={text.buttonText_small}>신청하기</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('SearchResultScreen')} style={button.buttonBox_yellow}>
+        <Text style={text.buttonText_small}>더 알아보기</Text>
       </TouchableOpacity>
     </View>
   );

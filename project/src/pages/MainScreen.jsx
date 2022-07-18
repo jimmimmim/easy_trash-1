@@ -44,7 +44,7 @@ function MainScreen({ navigation }) {
                 </SafeAreaView>
                 <SafeAreaView style={layout.nestedcontainer}>
                     <TouchableOpacity onPress={() => navigation.navigate('TTSExampleScreen')} style={button.buttonCircle_yellow}>
-                        <Text style={text.buttonText_small}>사용법</Text>
+                        <Text style={text.buttonText_small}>환경 사랑</Text>
                     </TouchableOpacity>
                 </SafeAreaView>
             </SafeAreaView>

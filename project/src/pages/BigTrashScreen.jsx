@@ -42,12 +42,12 @@ function BigTrashScreen({ navigation }) {
       <View style={layout.twoCircleContainer}>
         <View style={layout.innerCircleContainer}>
           <TouchableOpacity onPress={() => navigation.navigate('CallScreen')} style={button.buttonCircle_yellow_center}>
-              <Text style={text.buttonText_small}>전화걸기</Text>
+              <Text style={text.buttonText_small}>전화 신청</Text>
           </TouchableOpacity>
         </View>
         <View style={layout.innerCircleContainer}>
           <TouchableOpacity onPress={() => call('성동종합사회복지관')} style={button.buttonCircle_yellow_center}>
-              <Text style={text.buttonText_small}>성동종합사회복지관</Text>
+              <Text style={text.buttonText_small}>품목별 가격 안내</Text>
           </TouchableOpacity>
         </View>
       </View>

@@ -56,7 +56,11 @@ const Text = StyleSheet.create({
         alignSelf: "center",
         textTransform: "uppercase",
     },
-  
+    buttonText_hidden: {
+        fontSize: 0,
+        color: "#009688",
+    },
+
     // TEXT BUTTON
     textBtn: {
         color: '#009688',
