@@ -63,7 +63,7 @@ const Layout = StyleSheet.create({
 //         borderColor: 'red',
 //         borderWidth: 3,
         marginTop: 10,
-        marginBottom: 60,
+        marginBottom: 30,
         flexDirection: "row",
         justifyContent: "center",
         alignContent: "center",
@@ -74,7 +74,8 @@ const Layout = StyleSheet.create({
         borderColor: 'green',
         borderWidth: 3,
         flexDirection: "column",
-//         justifyContent: "center",
+        justifyContent: "center",
+        marginBottom: 30,
     },
     swipebar:{
         backgroundColor:'#FAFF00',

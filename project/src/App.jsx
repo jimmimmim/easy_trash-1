@@ -17,6 +17,7 @@ import CallScreen from './pages/CallScreen';
 import HomeAppTrashScreen from './pages/HomeAppTrashScreen';
 import TrashpediaScreen from './pages/TrashpediaScreen';
 import SearchResultScreen from './pages/SearchResultScreen';
+import MoreContentScreen from './pages/MoreContentScreen';
 import TutorialScreen from './pages/TutorialScreen';
 import TTSExampleScreen from './pages/TTSExampleScreen';
 import MainScreen from './pages/MainScreen';
@@ -41,6 +42,7 @@ const Flex = () => {
             <Stack.Screen name="CallScreen" component={CallScreen}/>
             <Stack.Screen name="TrashpediaScreen" component={TrashpediaScreen}/>
             <Stack.Screen name="SearchResultScreen" component={SearchResultScreen}/>
+            <Stack.Screen name="MoreContentScreen" component={MoreContentScreen}/>
             <Stack.Screen name="HomeAppTrashScreen" component={HomeAppTrashScreen}/>
             <Stack.Screen name="TutorialScreen" component={TutorialScreen}/>
             <Stack.Screen name="TTSExampleScreen" component={TTSExampleScreen}/>

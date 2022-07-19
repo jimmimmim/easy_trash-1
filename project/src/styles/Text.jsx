@@ -66,6 +66,29 @@ const Text = StyleSheet.create({
         color: '#009688',
         fontSize: 20,
     },
+
+    // White text
+    showText: {
+        marginTop: 10,
+        fontSize: 25,
+        color: '#FFF',
+        //alignSelf: 'center',
+        margin: 10,
+    },
+
+    // Text Input
+    textInput: {
+        marginTop: 20,
+        marginBottom: 10,
+        paddingLeft: 20,
+        height: 60,
+        borderRadius: 5,
+        borderColor: 'gray',
+        borderWidth: 1,
+        backgroundColor: '#FFF',
+        fontSize: 20,
+        color: "#2A4747",
+    },
 });
 
 
