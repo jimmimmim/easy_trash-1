@@ -21,6 +21,7 @@ const Button = StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 50,
         margin: 10,
+        fontFamily: "SeoulHangangB",
     },
     buttonBox_white: {
         elevation: 8,

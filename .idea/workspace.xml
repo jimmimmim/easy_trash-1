@@ -5,9 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83aba9f0-f4fa-4d11-a2f3-371b77275f15" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/project/assets/fonts/SeoulHangangB.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/assets/fonts/SeoulHangangEB.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/assets/fonts/서울한강 장체B.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/assets/fonts/서울한강 장체BL.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/assets/fonts/서울한강 장체EB.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/react-native.config.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/assets/1번.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/assets/2번.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/assets/3번.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/assets/4번.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/assets/5번.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/assets/6번.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/assets/7번.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/assets/8번.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/assets/9번.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/CategorySearchScreen.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/SplashScreen.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/styles/braille.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/styles/greengradient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/styles/mainpagelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/styles/minilogo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/data/Category_Notice.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/data/Category_Notice.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/BigTrashScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/BigTrashScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/CallScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/CallScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/CreateWalletScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/CreateWalletScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/HomeAppTrashScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/HomeAppTrashScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/HowtoConnectKakao.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/HowtoConnectKakao.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/ImageUpload.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/ImageUpload.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/ImageUploadComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/ImageUploadComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/InformFunction_Recycle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/InformFunction_Recycle.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/LandingScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/LandingScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/MainScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/MainScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/MoreContentScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/MoreContentScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/NoConnectScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/NoConnectScreen.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/pages/SearchResultScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/SearchResultScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/TTSExampleScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/TTSExampleScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/TrashCamScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/TrashCamScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/TrashpediaScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/TrashpediaScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/TutorialScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/TutorialScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/styles/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/styles/Button.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/styles/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/styles/Layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/styles/Text.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/styles/Text.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/project/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +60,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="2Bs1mGwSLx88WvhpHijLP94C5D6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -25,12 +76,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/project/src/data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/project/src/assets" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User PC\Documents\GitHub\easy_trash\project\src\assets" />
+      <recent name="C:\Users\User PC\Documents\GitHub\easy_trash\project\assets\fonts" />
+      <recent name="C:\Users\User PC\Documents\GitHub\easy_trash\project\src\styles" />
       <recent name="C:\Users\User PC\Documents\GitHub\easy_trash\project\src\data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User PC\Documents\GitHub\easy_trash\project\src\assets" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

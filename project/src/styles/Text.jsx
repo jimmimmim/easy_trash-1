@@ -6,8 +6,9 @@ const Text = StyleSheet.create({
     title_yellow: {
         color: "#FAFF00",
         fontSize: 40,
-        fontWeight: 'bold',
+        fontWeight: '400',
         textAlign: "center",
+        fontFamily: "SeoulHangangEB",
     },
     title_white: {
         color: "#FFF",
@@ -19,11 +20,14 @@ const Text = StyleSheet.create({
     text_style: {
         marginTop: 70,
         marginBottom : 10,
+        fontFamily: "SeoulHangangB",
     },
     text_yellow: {
         color: "#FAFF00",
         alignSelf: "center",
         textAlign: "center",
+        fontFamily: "SeoulHangangB",
+        lineHeight: 20,
     },
     white: {
         color: "#FFFFFF",
@@ -37,17 +41,17 @@ const Text = StyleSheet.create({
     buttonText: {
         fontSize: 40,
         color: "#2A4747",
-        fontWeight: "bold",
+        fontWeight: "400",
+        fontFamily: "SeoulHangangEB",
         alignSelf: "center",
-        textTransform: "uppercase",
     },
     buttonText_small: {
         fontSize: 20,
         color: "#2A4747",
-        fontWeight: "bold",
+        fontWeight: "400",
+        fontFamily: "SeoulHangangEB",
         alignSelf: "center",
         textAlign: "center",
-        textTransform: "uppercase",
     },
     buttonText_white: {
         fontSize: 15,

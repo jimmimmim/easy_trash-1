@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import {
 StyleSheet, TouchableOpacity, Text, View,
-FlatList, ActivityIndicator, Platform, Alert
+FlatList, ActivityIndicator, Platform, Alert, ImageBackground
 } from "react-native";
 import layout from '../styles/Layout';
 import button from '../styles/Button';
@@ -90,6 +90,7 @@ function SearchResultScreen({ route, navigation }) {
 
   return (
     <View style={layout.backgroundContainerMain}>
+      <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
       <View style={layout.twoButtonContainer}>
         <TouchableOpacity onPress={() => navigation.navigate('TrashpediaScreen')} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>이전으로</Text>
@@ -114,6 +115,7 @@ function SearchResultScreen({ route, navigation }) {
       <TouchableOpacity onPress={() => navigation.navigate('MoreContentScreen')} style={button.buttonBox_yellow}>
         <Text style={text.buttonText_small}>더 알아보기</Text>
       </TouchableOpacity>
+      </ImageBackground>
     </View>
   );
 }

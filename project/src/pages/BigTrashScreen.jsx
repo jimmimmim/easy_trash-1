@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import { StyleSheet, TouchableOpacity, Text, View, ImageBackground } from "react-native";
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
@@ -31,6 +31,7 @@ const call = (name) => {
 function BigTrashScreen({ navigation }) {
   return (
     <View style={layout.backgroundContainerMain}>
+      <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
       <View style={layout.twoButtonContainer}>
         <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>이전으로</Text>
@@ -46,11 +47,12 @@ function BigTrashScreen({ navigation }) {
           </TouchableOpacity>
         </View>
         <View style={layout.innerCircleContainer}>
-          <TouchableOpacity onPress={() => call('성동종합사회복지관')} style={button.buttonCircle_yellow_center}>
+          <TouchableOpacity onPress={() => navigation.navigate('CategorySearchScreen')} style={button.buttonCircle_yellow_center}>
               <Text style={text.buttonText_small}>품목별 가격 안내</Text>
           </TouchableOpacity>
         </View>
       </View>
+      </ImageBackground>
     </View>
   );
 }

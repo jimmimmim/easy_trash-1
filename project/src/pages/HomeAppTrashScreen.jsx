@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import { StyleSheet, TouchableOpacity, Text, View, ImageBackground } from "react-native";
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
@@ -8,6 +8,7 @@ import text from '../styles/Text';
 function HomeAppTrashScreen({ navigation }) {
   return (
     <View style={layout.backgroundContainerMain}>
+      <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
       <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={button.buttonBox_yellow}>
           <Text style={text.buttonText_small}>이전으로</Text>
       </TouchableOpacity>
@@ -19,6 +20,7 @@ function HomeAppTrashScreen({ navigation }) {
       <TouchableOpacity onPress={() => navigation.navigate('ImageUpload')} style={button.buttonBox_yellow}>
           <Text style={text.buttonText_small}>사용하기</Text>
       </TouchableOpacity>
+      </ImageBackground>
     </View>
   );
 }

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import { StyleSheet, TouchableOpacity, Text, View, ImageBackground, Alert } from "react-native";
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
@@ -8,6 +8,7 @@ import text from '../styles/Text';
 function MoreContentScreen({ navigation }) {
   return (
     <View style={layout.backgroundContainerMain}>
+      <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
       <View style={layout.twoButtonContainer}>
         <TouchableOpacity onPress={() => navigation.navigate('TrashpediaScreen')} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>이전으로</Text>
@@ -21,9 +22,10 @@ function MoreContentScreen({ navigation }) {
               <Text style={text.text_yellow}>더 알아보기 페이지</Text>
         </View>
       </View>
-      <TouchableOpacity onPress={() => call()} style={button.buttonBox_yellow}>
+      <TouchableOpacity onPress={() => Alert.alert('우왕', '완료 버튼을 누르셨군요')} style={button.buttonBox_yellow}>
         <Text style={text.buttonText_small}>완료</Text>
       </TouchableOpacity>
+      </ImageBackground>
     </View>
   );
 }

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TouchableOpacity, Text, SafeAreaView  } from "react-native";
+import { TouchableOpacity, Text, SafeAreaView, Image, ImageBackground } from "react-native";
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
@@ -8,8 +8,9 @@ import text from '../styles/Text';
 function MainScreen({ navigation }) {
   return (
     <SafeAreaView style={layout.backgroundContainerMain}>
+      <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
         <SafeAreaView style={layout.titleContainer}>
-        <Text style={text.title_yellow}>메인 페이지{"\n"}암튼 로고</Text>
+            <Image source={require('../styles/mainpagelogo.png')} />
         </SafeAreaView>
         <SafeAreaView style={layout.container}>
             <SafeAreaView style={layout.innercontainer}>
@@ -49,6 +50,7 @@ function MainScreen({ navigation }) {
                 </SafeAreaView>
             </SafeAreaView>
         </SafeAreaView>
+      </ImageBackground>
     </SafeAreaView>
   );
 }

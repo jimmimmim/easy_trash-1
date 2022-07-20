@@ -11,9 +11,9 @@ const Layout = StyleSheet.create({
     },
     backgroundContainerMain: {
         flex: 1,
-        backgroundColor: '#2A4747',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: "#2A4747",
     },
     innercontainer: {
         width: "90%",
@@ -71,8 +71,8 @@ const Layout = StyleSheet.create({
     searchContainer: {
         flex: 1,
         width: "90%",
-        borderColor: 'green',
-        borderWidth: 3,
+//         borderColor: 'green',
+//         borderWidth: 3,
         flexDirection: "column",
         justifyContent: "center",
         marginBottom: 30,
@@ -82,6 +82,17 @@ const Layout = StyleSheet.create({
         width:266,
         borderRadius:50,
         marginTop: 10,
+    },
+
+    // IMAGE
+    image: {
+        flex: 1,
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    logo: {
+        marginBottom: 60,
     },
 });
 

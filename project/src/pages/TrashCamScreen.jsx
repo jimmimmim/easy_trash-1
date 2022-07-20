@@ -1,4 +1,5 @@
-import { StyleSheet, TouchableOpacity, Text, View,Button, Image} from "react-native";
+import { StyleSheet, TouchableOpacity, Text, View,
+Button, Image, ImageBackground} from "react-native";
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
@@ -66,13 +67,13 @@ setStatus(result);
   };
   return (
     <View style={layout.backgroundContainerMain}>
-
-<TouchableOpacity onPress={takePictureAsync} style={[button.buttonBox_yellow,{flex:0.3}]}>
+      <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
+        <TouchableOpacity onPress={takePictureAsync} style={[button.buttonBox_yellow,{flex:0.3}]}>
             <Text style={text.buttonText_small}>사진찍기</Text>
         </TouchableOpacity>
         {image && <Image  style={{ width: 200, height: 200, resizeMode:"contain" }} source={{ uri: image }} />}
-{status && <Text >{status}</Text>}
-
+        {status && <Text >{status}</Text>}
+      </ImageBackground>
     </View>
   );
 }

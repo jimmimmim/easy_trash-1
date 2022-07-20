@@ -1,6 +1,8 @@
 // App.js 
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Image, Button ,TouchableOpacity,SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, Image, Button,
+ImageBackground,
+TouchableOpacity, SafeAreaView } from 'react-native';
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
@@ -50,6 +52,7 @@ function ImageUpload() {
 
   return (
     <View style={layout.backgroundContainerMain}>
+      <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
       <View >
         <SafeAreaView style={layout.nestedcontainer}>
         <TouchableOpacity onPress={showImagePicker} style={button.buttonBox_yellow}>
@@ -78,6 +81,7 @@ function ImageUpload() {
         
         
       </View>
+      </ImageBackground>
     </View>
   );
 }
