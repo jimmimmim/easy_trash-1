@@ -6,6 +6,7 @@ TouchableOpacity, SafeAreaView } from 'react-native';
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
+
 import TextRecognition from 'react-native-text-recognition';
 import * as ImagePicker from 'expo-image-picker';
 

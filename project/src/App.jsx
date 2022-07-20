@@ -65,8 +65,8 @@ const Flex = () => {
             <Stack.Screen name="ModalShowScreen" component={ModalShowScreen} />
             <Stack.Screen name="KakaoConnectScreen" component={KakaoConnectScreen}/>
             <Stack.Screen name="NoConnectScreen" component={NoConnectScreen}/> 
-            <Stack.Screen name="ImageUpload" component={ImageUpload}/> 
-                  </Stack.Navigator>
+            <Stack.Screen name="ImageUpload" component={ImageUpload}/>
+        </Stack.Navigator>
   </NavigationContainer>
     
   );

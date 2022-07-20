@@ -8,7 +8,7 @@ function ImageUpload({ navigation }) {
   return (
     <View style={layout.backgroundContainerMain}>
       <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
-      <ImagePickerComponent onSubmit={callGoogleVisionAsync}/>
+        <ImagePickerComponent onSubmit={callGoogleVisionAsync}/>
       </ImageBackground>
     </View>
   );

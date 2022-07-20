@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import {TouchableOpacity, Image, View, Text,ScrollView } from 'react-native';
 import layout from './src/styles/Layout';
 import button from './src/styles/Button';
-import text from './src/styles/Text';
+import textstyle from './src/styles/Text';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 // import button from './src/styles/Button';
@@ -28,9 +28,9 @@ function ImagePickerComponent({ onSubmit }) {
   };
   return (
     <View style={{flex:1}}>
-      <TouchableOpacity onPress={pickImage} style={[button.buttonBox_yellow,{flex:0.3}]}>
-            <Text style={text.buttonText_small}>사진찍기</Text>
-        </TouchableOpacity>
+      <TouchableOpacity onPress={pickImage} style={[button.buttonBox_yellow]}>
+            <Text style={textstyle.buttonText_small}>사진 찍기</Text>
+      </TouchableOpacity>
       {image && (
         <Image
           source={{ uri: image }}
@@ -38,10 +38,12 @@ function ImagePickerComponent({ onSubmit }) {
         />
       )}
       <SafeAreaView style={{flex:0.5,backgroundColor:'black',padding:30,margin:20}}>
-      <ScrollView >
-        <Text style={{color:'white',fontSize:20}}>
-      {text}</Text>
-      </ScrollView></SafeAreaView> 
+          <ScrollView>
+            <Text style={{color:'white',fontSize:20}}>
+              {text}
+            </Text>
+          </ScrollView>
+      </SafeAreaView>
     </View>
   );
 }
