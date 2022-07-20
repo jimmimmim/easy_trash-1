@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Alert, Modal, StyleSheet, Text, Pressable, View } from 'react-native';
 
-import ModalButton from '../components/Modal.jsx';
+import ModalButton from '../components/ModalButton.jsx';
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
