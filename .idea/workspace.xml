@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83aba9f0-f4fa-4d11-a2f3-371b77275f15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/components/AlertButton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/components/ModalButton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/components/PopupModal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/TrashpediaTemp.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/styles/Alert.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/styles/Modal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/Modal.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/ModalShowScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/ModalShowScreen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/MoreContentScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/MoreContentScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/data/Category_Notice.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/data/Category_Notice.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/pages/SearchResultScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/SearchResultScreen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/TrashpediaScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/TrashpediaScreen.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/styles/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/styles/Layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/styles/Text.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/styles/Text.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

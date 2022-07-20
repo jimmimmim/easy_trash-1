@@ -18,9 +18,11 @@ function SearchResultScreen({ route, navigation }) {
 
   const valueText = route.params.value;
 
-  const categoryValue = trash.categories;
-  console.log('출력시작 - 0620');
-  console.log(categoryValue);
+  const categoryNotice = trash.categories;
+  console.log('출력시작 - 0720');
+  console.log(categoryNotice[0].category);
+  console.log(categoryNotice[1].category);
+  console.log(categoryNotice[1].category);
 
   // Search (https://snack.expo.dev/embedded/@aboutreact/example-of-search-bar-in-react-native?iframeId=ewbug1wk1e&preview=true&platform=ios&theme=dark)
   const [search, setSearch] = useState('');
