@@ -87,7 +87,7 @@ function SearchResultScreen({ route, navigation }) {
     };
 
     const getItem = (item) => {
-      Alert.alert('배출 방법', item.category + '의 경우'+ '\n' + item.notice);
+      Alert.alert('배출 방법', item.category + '의 경우'+ item.notice);
     };
 
   return (
