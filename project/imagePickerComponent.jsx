@@ -28,22 +28,36 @@ function ImagePickerComponent({ onSubmit }) {
   };
   return (
     <View style={{flex:1}}>
-      <TouchableOpacity onPress={pickImage} style={[button.buttonBox_yellow]}>
-            <Text style={textstyle.buttonText_small}>사진 찍기</Text>
-      </TouchableOpacity>
       {image && (
         <Image
           source={{ uri: image }}
-          style={{ width: 200, height: 200, resizeMode:"contain" }}
-        />
+          style={{
+          width: 300,
+          height: "50%",
+          resizeMode:"contain",
+          marginLeft: 40,
+          marginTop: 20,
+        }}/>
       )}
-      <SafeAreaView style={{flex:0.5,backgroundColor:'black',padding:30,margin:20}}>
+      <SafeAreaView
+          style={{
+              flex: 0.5,
+              width: '100%',
+              backgroundColor: 'black',
+              padding: 30,
+              marginTop: 20,
+              marginBottom: 10,
+          }}>
+
           <ScrollView>
             <Text style={{color:'white',fontSize:20}}>
               {text}
             </Text>
           </ScrollView>
       </SafeAreaView>
+      <TouchableOpacity onPress={pickImage} style={[button.buttonBox_yellow]}>
+        <Text style={textstyle.buttonText_small}>사진 찍기</Text>
+      </TouchableOpacity>
     </View>
   );
 }

@@ -68,11 +68,23 @@ setStatus(result);
   return (
     <View style={layout.backgroundContainerMain}>
       <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
-        <TouchableOpacity onPress={takePictureAsync} style={[button.buttonBox_yellow,{flex:0.3}]}>
-            <Text style={text.buttonText_small}>사진찍기</Text>
+        {image && <Image
+        style={{
+        width: "100%",
+        height: "60%",
+        resizeMode:"contain",
+        margin: 20,
+        }}
+        source={{ uri: image }} />}
+        {status && <Text
+            style={{
+            color: '#FFF',
+            fontSize: 30,
+            margin: 10,
+        }}>{status}</Text>}
+        <TouchableOpacity onPress={takePictureAsync} style={[button.buttonBox_yellow, {width: "70%"}]}>
+          <Text style={text.buttonText_small}>사진 찍기</Text>
         </TouchableOpacity>
-        {image && <Image  style={{ width: 200, height: 200, resizeMode:"contain" }} source={{ uri: image }} />}
-        {status && <Text >{status}</Text>}
       </ImageBackground>
     </View>
   );
