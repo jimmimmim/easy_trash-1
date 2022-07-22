@@ -54,7 +54,7 @@ function ImageUpload() {
   return (
     <View style={layout.backgroundContainerMain}>
       <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
-      <View >
+      <View>
         <SafeAreaView style={layout.nestedcontainer}>
         <TouchableOpacity onPress={showImagePicker} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>갤러리 열기</Text>

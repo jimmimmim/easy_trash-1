@@ -23,6 +23,7 @@ import SearchResultScreen from './pages/SearchResultScreen';
 import MoreContentScreen from './pages/MoreContentScreen';
 import TutorialScreen from './pages/TutorialScreen';
 import TTSExampleScreen from './pages/TTSExampleScreen';
+import EcoEducationScreen from './pages/EcoEducationScreen';
 import MainScreen from './pages/MainScreen';
 
 import ModalShowScreen from './pages/ModalShowScreen';
@@ -64,7 +65,8 @@ const Flex = () => {
             <Stack.Screen name="MainScreen" component={MainScreen} />
             <Stack.Screen name="ModalShowScreen" component={ModalShowScreen} />
             <Stack.Screen name="KakaoConnectScreen" component={KakaoConnectScreen}/>
-            <Stack.Screen name="NoConnectScreen" component={NoConnectScreen}/> 
+            <Stack.Screen name="NoConnectScreen" component={NoConnectScreen}/>
+            <Stack.Screen name="EcoEducationScreen" component={EcoEducationScreen}/>
             <Stack.Screen name="ImageUpload" component={ImageUpload}/>
         </Stack.Navigator>
   </NavigationContainer>

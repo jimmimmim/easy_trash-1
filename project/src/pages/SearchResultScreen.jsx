@@ -87,7 +87,7 @@ function SearchResultScreen({ route, navigation }) {
     };
 
     const getItem = (item) => {
-      Alert.alert('배출 방법', item.category + '의 경우'+ item.notice);
+      Alert.alert('배출 방법', item.category + '의 경우 '+ item.notice);
     };
 
   return (
@@ -98,7 +98,7 @@ function SearchResultScreen({ route, navigation }) {
             <Text style={text.buttonText_small}>이전으로</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => alert('기능안내 음성')} style={button.buttonBox_yellow}>
-            <Text style={text.buttonText_small}>기능 안내</Text>
+            <Text style={text.buttonText_small}>사용 방법</Text>
         </TouchableOpacity>
       </View>
       <View style={layout.searchContainer}>

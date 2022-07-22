@@ -77,6 +77,22 @@ const Layout = StyleSheet.create({
         justifyContent: "center",
         marginBottom: 30,
     },
+    twoVideoContainer: {
+        flex: 1,
+        width: "90%",
+        marginBottom: 30,
+        flexDirection: "column",
+        justifyContent: "center",
+        alignContent: "center",
+        alignItems: 'center',
+    },
+    videoContainer: {
+        flex: 1,
+        width: "100%",
+        marginBottom: 30,
+    },
+
+    // COMPONENT
     swipebar:{
         backgroundColor:'#FAFF00',
         width:266,
