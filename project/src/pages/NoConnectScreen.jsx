@@ -16,8 +16,8 @@ function NoConnectScreen({ navigation }) {
             <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={button.buttonBox_yellow}>
                 <Text style={text.buttonText_small}>이전으로</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={()=>{stopSound();}} style={button.buttonBox_yellow}>
-                <Text style={text.buttonText_small}>화면 안내</Text>
+            <TouchableOpacity onPress={playSound} style={button.buttonBox_yellow}>
+                <Text style={text.buttonText_small}>사용 방법</Text>
                 <Text style={text.buttonText_hidden}>버튼</Text>
             </TouchableOpacity>
         </View>

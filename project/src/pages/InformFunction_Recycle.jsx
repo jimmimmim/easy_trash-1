@@ -13,7 +13,7 @@ function InformFunction_Recycle({ navigation }) {
           <Text style={styles.buttonText_small}>이전으로</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => alert('기능안내 음성')} style={styles.buttonBox_yellow}>
-          <Text style={styles.buttonText_small}>기능 안내</Text>
+          <Text style={styles.buttonText_small}>사용 방법</Text>
       </TouchableOpacity>
 
       <Text style={styles.text_yellow}>분리수거함 카메라 기능 설명{"\n"}텍스트</Text>

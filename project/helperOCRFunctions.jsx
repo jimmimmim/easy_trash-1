@@ -39,6 +39,6 @@ async function callGoogleVisionAsync(image) {
 const detectedText = result.responses[0].fullTextAnnotation;
 return detectedText
   ? detectedText
-  : { text: "This image doesn't contain any text!" };
+  : { text: "텍스트가 포함되어 있지 않습니다" };
   }
   export default callGoogleVisionAsync;

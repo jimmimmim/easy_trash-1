@@ -60,9 +60,13 @@ function MainScreen({ navigation }) {
                     </TouchableOpacity>
                 </SafeAreaView>
                 <SafeAreaView style={layout.nestedcontainer}>
+
                     <TouchableOpacity onPress={() => {navigation.navigate('TTSExampleScreen');stopSound()}} style={button.buttonCircle_yellow}>
+
+                    <TouchableOpacity onPress={() => navigation.navigate('EcoEducationScreen')} style={button.buttonCircle_yellow}>
+
                         <Text style={text.buttonText_small}>환경 사랑</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity></TouchableOpacity>
                 </SafeAreaView>
             </SafeAreaView>
         </SafeAreaView>

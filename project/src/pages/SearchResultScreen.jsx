@@ -9,6 +9,7 @@ import button from '../styles/Button';
 import text from '../styles/Text';
 
 import { Card, Title, Paragraph } from 'react-native-paper';
+// import * as RNFS from 'react-native-fs';
 
 // json file
 import * as trash from '../data/Category_Notice.json';
@@ -22,7 +23,7 @@ function SearchResultScreen({ route, navigation }) {
   console.log('출력시작 - 0720');
   console.log(categoryNotice[0].category);
   console.log(categoryNotice[1].category);
-  console.log(categoryNotice[1].category);
+  console.log(categoryNotice[1].notice);
 
   // Search (https://snack.expo.dev/embedded/@aboutreact/example-of-search-bar-in-react-native?iframeId=ewbug1wk1e&preview=true&platform=ios&theme=dark)
   const [search, setSearch] = useState('');
@@ -30,7 +31,8 @@ function SearchResultScreen({ route, navigation }) {
   const [masterDataSource, setMasterDataSource] = useState([]);
 
     useEffect(() => {
-      fetch('https://jsonplaceholder.typicode.com/users')
+      // fetch('https://jsonplaceholder.typicode.com/users')
+      fetch('https://my-json-server.typicode.com/jimmimmim/easytrash_db/categories')
         .then((response) => response.json())
         .then((responseJson) => {
           setFilteredDataSource(responseJson);
@@ -44,8 +46,8 @@ function SearchResultScreen({ route, navigation }) {
     const searchFilterFunction = (valueText) => {
       if (valueText) {
         const newData = masterDataSource.filter(function (item) {
-          const itemData = item.name
-            ? item.name.toUpperCase()
+          const itemData = item.category
+            ? item.category.toUpperCase()
             : ''.toUpperCase();
           const textData = valueText.toUpperCase();
           return itemData.indexOf(textData) > -1;
@@ -63,8 +65,8 @@ function SearchResultScreen({ route, navigation }) {
         <View>
             <Card onPress={() => getItem(item)}>
                 <Card.Content>
-                  <Title>{item.name}</Title>
-                  <Paragraph>{item.email}</Paragraph>
+                  <Title>{item.category}</Title>
+                  <Paragraph>{item.notice}</Paragraph>
                 </Card.Content>
             </Card>
         </View>
@@ -85,7 +87,7 @@ function SearchResultScreen({ route, navigation }) {
     };
 
     const getItem = (item) => {
-      Alert.alert('배출 방법', item.name + '의 경우'+ '\n' + item.email);
+      Alert.alert('배출 방법', item.category + '의 경우 '+ item.notice);
     };
 
   return (
@@ -96,18 +98,26 @@ function SearchResultScreen({ route, navigation }) {
             <Text style={text.buttonText_small}>이전으로</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => alert('기능안내 음성')} style={button.buttonBox_yellow}>
-            <Text style={text.buttonText_small}>기능 안내</Text>
+            <Text style={text.buttonText_small}>사용 방법</Text>
         </TouchableOpacity>
       </View>
       <View style={layout.searchContainer}>
         <Text style={text.showText}>검색어:  {valueText}</Text>
         <FlatList
-          data={filteredDataSource}
-          keyExtractor={(item, index) => index.toString()}
-          ItemSeparatorComponent={ItemSeparatorView}
-          renderItem={ItemView}
-          style={{backgroundColor: '#FFF'}}
+           data={filteredDataSource}
+           renderItem={ItemView}
+           keyExtractor={(item, index) => index.toString()}
+           ItemSeparatorComponent={ItemSeparatorView}
+           renderItem={ItemView}
+           style={{backgroundColor: '#FFF'}}
         />
+{/*         <FlatList */}
+{/*           data={filteredDataSource} */}
+{/*           keyExtractor={(item, index) => index.toString()} */}
+{/*           ItemSeparatorComponent={ItemSeparatorView} */}
+{/*           renderItem={ItemView} */}
+{/*           style={{backgroundColor: '#FFF'}} */}
+{/*         /> */}
       </View>
       <TouchableOpacity onPress={() => searchFilterFunction(valueText)} style={button.buttonBox_yellow}>
           <Text style={text.buttonText_small}>결과 보기</Text>
