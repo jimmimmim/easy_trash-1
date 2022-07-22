@@ -28,7 +28,6 @@ function EcoEducationScreen({ navigation }) {
             <Text style={text.buttonText_small}>사용 방법</Text>
         </TouchableOpacity>
       </View>
-
           <View style={layout.twoVideoContainer}>
             <View style={layout.videoContainer}>
               <WebView

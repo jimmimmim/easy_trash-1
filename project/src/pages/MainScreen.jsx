@@ -4,8 +4,11 @@ import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
 import { Audio } from 'expo-av';
+import { useFocusEffect } from '@react-navigation/native';
 // 메인 페이지 (버튼 6개)
 function MainScreen({ navigation }) {
+
+    
     const [sound, setSound] = React.useState();
   
   React.useEffect(() => {
@@ -61,12 +64,10 @@ function MainScreen({ navigation }) {
                 </SafeAreaView>
                 <SafeAreaView style={layout.nestedcontainer}>
 
-                    <TouchableOpacity onPress={() => {navigation.navigate('TTSExampleScreen');stopSound()}} style={button.buttonCircle_yellow}>
-
                     <TouchableOpacity onPress={() => navigation.navigate('EcoEducationScreen')} style={button.buttonCircle_yellow}>
 
                         <Text style={text.buttonText_small}>환경 사랑</Text>
-                    </TouchableOpacity></TouchableOpacity>
+                    </TouchableOpacity>
                 </SafeAreaView>
             </SafeAreaView>
         </SafeAreaView>

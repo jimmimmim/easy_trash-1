@@ -4,9 +4,7 @@ Button, Image, ImageBackground} from "react-native";
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
-
 import React, { useCallback, useEffect, useState } from 'react';
-import React, { useState, useEffect } from 'react';
 
 import * as ImagePicker from 'expo-image-picker';
 import { Audio } from 'expo-av';
@@ -64,7 +62,6 @@ function TrashCamScreen({ navigation }) {
   }
 
   console.log(status);
-
   const API_KEY = 'AIzaSyAx9LPUPnfinGPBv9eO6O6yNGCUJ8kgUOA';
   const API_URL = `https://vision.googleapis.com/v1/images:annotate?key=${API_KEY}`;
   
