@@ -8,10 +8,12 @@ SplashScreen.preventAutoHideAsync();
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
+  const [sound, setSound] = React.useState();
 
   useEffect(() => {
     async function prepare() {
       try {
+        let timer = setTimeout(()=>{ alertSet(false) }, 20000);
         // Pre-load fonts, make any API calls you need to do here
         await Font.loadAsync(Entypo.font);
         // Artificially delay for two seconds to simulate a slow loading

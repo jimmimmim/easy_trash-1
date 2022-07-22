@@ -1,11 +1,28 @@
-import * as React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { StyleSheet, TouchableOpacity, Text, View, ImageBackground } from "react-native";
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
-
+import { Audio } from 'expo-av';
 // 폐가전제품
 function HomeAppTrashScreen({ navigation }) {
+  const [sound, setSound] = React.useState();
+  
+  React.useEffect(() => {
+    async function playSound() {
+      const { sound } = await Audio.Sound.createAsync(
+         require('../assets/8번.mp3')
+      );
+      setSound(sound);
+      console.log('Playing Sound');
+      await sound.playAsync();
+  }
+    playSound();
+  }, []);
+
+  const stopSound=()=>{
+    sound.stopAsync();
+  }
   return (
     <View style={layout.backgroundContainerMain}>
       <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>

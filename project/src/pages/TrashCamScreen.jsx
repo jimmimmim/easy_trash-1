@@ -1,11 +1,30 @@
+
 import { StyleSheet, TouchableOpacity, Text, View,
 Button, Image, ImageBackground} from "react-native";
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
-import * as React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import * as ImagePicker from 'expo-image-picker';
+import { Audio } from 'expo-av';
 function TrashCamScreen({ navigation }) {
+  const [sound, setSound] = React.useState();
+  
+  React.useEffect(() => {
+    async function playSound() {
+      const { sound } = await Audio.Sound.createAsync(
+         require('../assets/6번.mp3')
+      );
+      setSound(sound);
+      console.log('Playing Sound');
+      await sound.playAsync();
+  }
+    playSound();
+  }, []);
+
+  const stopSound=()=>{
+    sound.stopAsync();
+  }
   const [image, setImage] = React.useState(null);
   const [status, setStatus] = React.useState(null);
 
@@ -14,6 +33,7 @@ function TrashCamScreen({ navigation }) {
   const API_URL = `https://vision.googleapis.com/v1/images:annotate?key=${API_KEY}`;
   
   async function callGoogleVisionAsync(image) {
+
     const body = {
       requests: [
         {
@@ -45,6 +65,7 @@ function TrashCamScreen({ navigation }) {
   }
 
   const takePictureAsync = async () => {
+
     const { cancelled, uri, base64 } = await ImagePicker.launchCameraAsync({
       base64: true,
     });
@@ -66,6 +87,7 @@ setStatus(result);
     }
   };
   return (
+    
     <View style={layout.backgroundContainerMain}>
       <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
         <TouchableOpacity onPress={takePictureAsync} style={[button.buttonBox_yellow,{flex:0.3}]}>

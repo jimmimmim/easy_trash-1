@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { StyleSheet, TouchableOpacity, Text, View, ImageBackground } from "react-native";
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
-
+import { Audio } from 'expo-av';
 import * as Linking from 'expo-linking';
 
 // mapping하는 것으로 수정하기
@@ -29,6 +29,23 @@ const call = (name) => {
 
 // 대형폐기물
 function BigTrashScreen({ navigation }) {
+  const [sound, setSound] = React.useState();
+  
+  React.useEffect(() => {
+    async function playSound() {
+      const { sound } = await Audio.Sound.createAsync(
+         require('../assets/10번.mp3')
+      );
+      setSound(sound);
+      console.log('Playing Sound');
+      await sound.playAsync();
+  }
+    playSound();
+  }, []);
+
+  const stopSound=()=>{
+    sound.stopAsync();
+  }
   return (
     <View style={layout.backgroundContainerMain}>
       <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
