@@ -8,24 +8,35 @@ import React, { useCallback, useEffect, useState } from 'react';
 
 import * as ImagePicker from 'expo-image-picker';
 import { Audio } from 'expo-av';
-function TrashCamScreen({ navigation }) {
-
+function TrashCamScreen({navigation,route  }) {
+  const flag=route.params.flag;
   const [sound, setSound] = React.useState();
   
   React.useEffect(() => {
-    async function playSound() {
-      const { sound } = await Audio.Sound.createAsync(
-         require('../assets/6번.mp3')
-      );
-      setSound(sound);
-      console.log('Playing Sound');
-      await sound.playAsync();
-  }
-    playSound();
+    if(flag==1){
+      async function playSound() {
+        const { sound } = await Audio.Sound.createAsync(
+           require('../assets/6번.mp3')
+        );
+        setSound(sound);
+        console.log('Playing Sound');
+        await sound.playAsync();
+    }
+      playSound();
+    }
   }, []);
 
   const stopSound=()=>{
     sound.stopAsync();
+  }
+
+  async function informHowto(){
+    const { sound } = await Audio.Sound.createAsync(
+      require('../assets/7번.mp3')
+   );
+   setSound(sound);
+   console.log('Playing Sound');
+   await sound.playAsync();
   }
 
 
@@ -37,24 +48,7 @@ function TrashCamScreen({ navigation }) {
     const [resultText, setResultText] = useState('');
 
     // 이건 사진첩에서 이미지 업로드할 때 코드
-    const showImagePicker = async () => {
-      //유저에게 사진첩 접근 권한을 묻는다
-      const permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
-      if (permissionResult.granted === false) {
-        alert("갤러리 접근 권한을 주세요");
-        return;
-      }
-
-      const result = await ImagePicker.launchImageLibraryAsync();
-      console.log(result);
-      if (!result.cancelled) {
-        setPickedImagePath(result.uri);
-        console.log(result.uri);
-      }
-    }
-
-  console.log(status);
-
+   
   if (status == 'Wood') {
     setStatus('목재');
   } else if (status == 'Furniture') {
@@ -119,34 +113,57 @@ setStatus(result);
       setStatus(null);
     }
   };
+  const showImagePicker = async () => {
+    //유저에게 사진첩 접근 권한을 묻는다
+    const { cancelled, uri, base64 } = await ImagePicker.launchImageLibraryAsync({
+      base64: true,
+    });
+
+    if (!cancelled) {
+      setImage(uri);
+      setStatus('Loading...');
+      try {
+        
+        const result = await callGoogleVisionAsync(base64);
+setStatus(result);
+
+      } catch (error) {
+        setStatus(`Error: ${error.message}`);
+      }
+    } else {
+      setImage(null);
+      setStatus(null);
+    }}
+
   return (
     
     <View style={layout.backgroundContainerMain}>
-        <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={button.buttonBox_yellow}>
+        
+        <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
+        <TouchableOpacity onPress={() => {navigation.goBack(),stopSound()}} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>이전으로</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => alert('기능안내 음성')} style={button.buttonBox_yellow}>
+        <TouchableOpacity onPress={()=>{stopSound(),informHowto()}} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>사용 방법</Text>
         </TouchableOpacity>
-        <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
-        {image && <Image
+        {/* {image && <Image
         style={{
         width: "100%",
         height: "60%",
         resizeMode:"contain",
         margin: 20,
         }}
-        source={{ uri: image }} />}
+        source={{ uri: image }} />} */}
         {status && <Text
             style={{
             color: '#FFF',
             fontSize: 20,
             margin: 10,
         }}>이 쓰레기의 분류 타입은{'\n'}{status} 입니다.</Text>}
-        <TouchableOpacity onPress={showImagePicker} style={button.buttonBox_yellow}>
+        <TouchableOpacity onPress={()=>{stopSound(),showImagePicker()}} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>갤러리 열기</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={takePictureAsync} style={[button.buttonBox_yellow, {width: "70%"}]}>
+        <TouchableOpacity onPress={()=>{stopSound(),takePictureAsync()}} style={[button.buttonBox_yellow, {width: "70%"}]}>
           <Text style={text.buttonText_small}>사진 찍기</Text>
         </TouchableOpacity>
       </ImageBackground>

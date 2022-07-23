@@ -28,9 +28,9 @@ const call = (name) => {
 };
 
 // 대형폐기물
-function BigTrashScreen({ navigation }) {
+function BigTrashScreen({ navigation ,route}) {
   const [sound, setSound] = React.useState();
-  
+  const flag=route.params.flag;
   React.useEffect(() => {
     async function playSound() {
       const { sound } = await Audio.Sound.createAsync(
@@ -50,7 +50,7 @@ function BigTrashScreen({ navigation }) {
     <View style={layout.backgroundContainerMain}>
       <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
       <View style={layout.twoButtonContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={button.buttonBox_yellow}>
+        <TouchableOpacity onPress={() => navigation.goBack()} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>이전으로</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => alert('기능안내 음성')} style={button.buttonBox_yellow}>

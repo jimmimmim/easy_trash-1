@@ -12,23 +12,24 @@ import Swipeable from 'react-native-gesture-handler/Swipeable';
 import {GestureHandlerRootView } from 'react-native-gesture-handler';
 
 
-export var audioFlag=1;
 
 function LandingScreen({ onPress, navigation}) {
+  const [flag,setFlag]=useState(1);
   const [sound, setSound] = React.useState();
   
   React.useEffect(() => {
-    async function playSound() {
-      const { sound } = await Audio.Sound.createAsync(
-         require('../assets/1번.mp3')
-      );
-      setSound(sound);
-      console.log('Playing Sound');
-      await sound.playAsync();
-  }
-    playSound();
-  }, [audioFlag]);
-
+    if(flag==1){
+      async function playSound() {
+        const { sound } = await Audio.Sound.createAsync(
+           require('../assets/1번.mp3')
+        );
+        setSound(sound);
+        console.log('Playing Sound');
+        await sound.playAsync();
+    }
+      playSound();
+    }
+  }, [flag]);
   const stopSound=()=>{
     sound.stopAsync();
   }
@@ -42,32 +43,16 @@ function LandingScreen({ onPress, navigation}) {
       </View>
     );
   };
-  const rightSwipeActions = () => {
-    return (
-      <View>
-       <SafeAreaView style={{backgroundColor:'#FAFF00',
-          width:180,
-          borderRadius:50,
-      }}></SafeAreaView>
-      </View>
-    );
-  };
   const swipeFromLeftOpen = () => {
-    alert('Swipe from left'); //이거 할 때 음성 중지
-    audioFlag=0;
+    setFlag(0);
+    alert("0")
   };
-  const swipeFromLeftClose = () => {
-    alert('Swipe from right'); //이거 할 때 음성 실행
-    audioFlag=1;
-  };
-  
   
   const Item = () => (
     <GestureHandlerRootView>
     <Swipeable
       renderLeftActions={LeftSwipeActions}
       onSwipeableLeftOpen={swipeFromLeftOpen}
-      onSwipeableClose={swipeFromLeftClose}
       overshootRight={false}
       overshootLeft={false}
     >
@@ -90,7 +75,7 @@ function LandingScreen({ onPress, navigation}) {
       <View style={layout.backgroundContainerMain}>
         <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
             <Image style={{marginBottom: 30}} source={require('../styles/braille.png')} />
-            <TouchableOpacity onPress={()=>{navigation.navigate('Create Wallet');stopSound()}} style={button.buttonBox_yellow}>
+            <TouchableOpacity onPress={()=>{navigation.navigate('Create Wallet',{flag});stopSound()}} style={button.buttonBox_yellow}>
                 <Text style={text.buttonText}>시작하기</Text>
             </TouchableOpacity>
             <Text style={[text.text_yellow, text.text_style] }>쉬운 쓰레기는 시각 장애인을 위해 {"\n"} 음성 안내가 자동 실행됩니다.</Text>

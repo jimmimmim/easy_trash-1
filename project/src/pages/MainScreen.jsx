@@ -6,22 +6,24 @@ import text from '../styles/Text';
 import { Audio } from 'expo-av';
 import { useFocusEffect } from '@react-navigation/native';
 // 메인 페이지 (버튼 6개)
-function MainScreen({ navigation }) {
+function MainScreen({ navigation,route }) {
 
-    
+    const flag=route.params.flag;
     const [sound, setSound] = React.useState();
   
   React.useEffect(() => {
-    async function playSound() {
-      const { sound } = await Audio.Sound.createAsync(
-         require('../assets/3번.mp3')
-      );
-      setSound(sound);
-      console.log('Playing Sound');
-      await sound.playAsync();
-  }
-    playSound();
-  }, []);
+    if(flag==1){
+        async function playSound() {
+            const { sound } = await Audio.Sound.createAsync(
+               require('../assets/3번.mp3')
+            );
+            setSound(sound);
+            console.log('Playing Sound');
+            await sound.playAsync();
+        }
+          playSound();
+    }
+  }, [flag]);
   const stopSound=()=>{
     sound.stopAsync();
   }
@@ -34,24 +36,24 @@ function MainScreen({ navigation }) {
         <SafeAreaView style={layout.container}>
             <SafeAreaView style={layout.innercontainer}>
                 <SafeAreaView style={layout.nestedcontainer}>
-                    <TouchableOpacity onPress={() => {navigation.navigate('ImageUpload');stopSound()}} style={button.buttonCircle_yellow_left}>
+                    <TouchableOpacity onPress={() => {navigation.navigate('ImageUpload',{flag});stopSound()}} style={button.buttonCircle_yellow_left}>
                         <Text style={text.buttonText_small}>분리수거함{"\n"}카메라</Text>
                     </TouchableOpacity>
                 </SafeAreaView>
                 <SafeAreaView style={layout.nestedcontainer}>
-                    <TouchableOpacity onPress={() => {navigation.navigate('TrashCamScreen');stopSound()}} style={button.buttonCircle_yellow}>
+                    <TouchableOpacity onPress={() => {navigation.navigate('TrashCamScreen',{flag});stopSound()}} style={button.buttonCircle_yellow}>
                         <Text style={text.buttonText_small}>쓰레기{"\n"}카메라</Text>
                     </TouchableOpacity>
                 </SafeAreaView>
             </SafeAreaView>
             <SafeAreaView style={layout.innercontainer}>
                 <SafeAreaView style={layout.nestedcontainer}>
-                    <TouchableOpacity onPress={() => {navigation.navigate('HomeAppTrashScreen');stopSound()}} style={button.buttonCircle_yellow_left}>
+                    <TouchableOpacity onPress={() => {navigation.navigate('HomeAppTrashScreen',{flag});stopSound()}} style={button.buttonCircle_yellow_left}>
                         <Text style={text.buttonText_small}>폐가전제품{"\n"}폐기 신청</Text>
                     </TouchableOpacity>
                 </SafeAreaView>
                 <SafeAreaView style={layout.nestedcontainer}>
-                    <TouchableOpacity onPress={() => {navigation.navigate('BigTrashScreen');stopSound()}} style={button.buttonCircle_yellow}>
+                    <TouchableOpacity onPress={() => {navigation.navigate('BigTrashScreen',{flag});stopSound()}} style={button.buttonCircle_yellow}>
                         <Text style={text.buttonText_small}>대형쓰레기{"\n"}폐기 신청</Text>
                     </TouchableOpacity>
                 </SafeAreaView>

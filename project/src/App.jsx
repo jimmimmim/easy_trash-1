@@ -1,5 +1,4 @@
-
-import * as React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { StyleSheet, TouchableOpacity, Button, Text, View } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -29,9 +28,8 @@ import MainScreen from './pages/MainScreen';
 import ModalShowScreen from './pages/ModalShowScreen';
 
 const Stack = createNativeStackNavigator();
-
+  
 const Flex = () => {
-
   const [loaded] = useFonts({
       SeoulHangangB: require('../assets/fonts/SeoulHangangB.ttf'),
       SeoulHangangEB: require('../assets/fonts/SeoulHangangEB.ttf'),
