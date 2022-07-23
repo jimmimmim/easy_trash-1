@@ -18,20 +18,22 @@ function LandingScreen({ onPress, navigation}) {
   const [sound, setSound] = React.useState();
   
   React.useEffect(() => {
+    async function playSound() {
+      const { sound } = await Audio.Sound.createAsync(
+         require('../assets/1번.mp3')
+      );
+      setSound(sound);
+      console.log('Playing Sound');
+      await sound.playAsync();
+  }
     if(flag==1){
-      async function playSound() {
-        const { sound } = await Audio.Sound.createAsync(
-           require('../assets/1번.mp3')
-        );
-        setSound(sound);
-        console.log('Playing Sound');
-        await sound.playAsync();
-    }
       playSound();
     }
   }, [flag]);
   const stopSound=()=>{
-    sound.stopAsync();
+    
+      sound.stopAsync();
+    
   }
   const LeftSwipeActions = () => {
     return (
@@ -45,7 +47,7 @@ function LandingScreen({ onPress, navigation}) {
   };
   const swipeFromLeftOpen = () => {
     setFlag(0);
-    alert("0")
+    
   };
   
   const Item = () => (

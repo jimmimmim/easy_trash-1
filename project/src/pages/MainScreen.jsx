@@ -12,20 +12,22 @@ function MainScreen({ navigation,route }) {
     const [sound, setSound] = React.useState();
   
   React.useEffect(() => {
+    async function playSound() {
+        const { sound } = await Audio.Sound.createAsync(
+           require('../assets/3번.mp3')
+        );
+        setSound(sound);
+        console.log('Playing Sound');
+        await sound.playAsync();
+    }
     if(flag==1){
-        async function playSound() {
-            const { sound } = await Audio.Sound.createAsync(
-               require('../assets/3번.mp3')
-            );
-            setSound(sound);
-            console.log('Playing Sound');
-            await sound.playAsync();
-        }
           playSound();
     }
   }, [flag]);
   const stopSound=()=>{
-    sound.stopAsync();
+   if(flag==1){
+      sound.stopAsync();
+    }
   }
   return (
     <SafeAreaView style={layout.backgroundContainerMain}>

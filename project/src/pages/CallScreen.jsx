@@ -27,7 +27,9 @@ const call = (name) => {
     };
 };
 const stopSound=()=>{
-  sound.stopAsync();
+  if(flag==1){
+    sound.stopAsync();
+  }
 }
 
 // 대형폐기물

@@ -13,30 +13,37 @@ function TrashCamScreen({navigation,route  }) {
   const [sound, setSound] = React.useState();
   
   React.useEffect(() => {
+    async function playSound() {
+      const { sound } = await Audio.Sound.createAsync(
+         require('../assets/6번.mp3')
+      );
+      setSound(sound);
+      console.log('Playing Sound');
+      await sound.playAsync();
+  }
     if(flag==1){
-      async function playSound() {
-        const { sound } = await Audio.Sound.createAsync(
-           require('../assets/6번.mp3')
-        );
-        setSound(sound);
-        console.log('Playing Sound');
-        await sound.playAsync();
-    }
       playSound();
     }
   }, []);
 
   const stopSound=()=>{
-    sound.stopAsync();
+    if(flag==1){
+ 
+      sound.stopAsync();
+    }
   }
 
   async function informHowto(){
-    const { sound } = await Audio.Sound.createAsync(
-      require('../assets/7번.mp3')
-   );
-   setSound(sound);
-   console.log('Playing Sound');
-   await sound.playAsync();
+    if(flag==1){
+      stopSound();
+    }
+      const { sound } = await Audio.Sound.createAsync(
+        require('../assets/7번.mp3')
+     );
+     setSound(sound);
+     console.log('Playing Sound');
+     await sound.playAsync();
+    
   }
 
 
@@ -143,7 +150,7 @@ setStatus(result);
         <TouchableOpacity onPress={() => {navigation.goBack(),stopSound()}} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>이전으로</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=>{stopSound(),informHowto()}} style={button.buttonBox_yellow}>
+        <TouchableOpacity onPress={()=>{informHowto()}} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>사용 방법</Text>
         </TouchableOpacity>
         {/* {image && <Image

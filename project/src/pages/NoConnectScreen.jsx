@@ -7,7 +7,7 @@ import button from '../styles/Button';
 import text from '../styles/Text';
 
 //카카오 연결 없이 사용하기
-function NoConnectScreen({ navigation }) {
+function NoConnectScreen({ navigation,route }) {
   
   return (
     <View style={layout.backgroundContainerMain}>

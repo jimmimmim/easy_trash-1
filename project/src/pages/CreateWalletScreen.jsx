@@ -11,21 +11,24 @@ function CreateWalletScreen({ navigation,route }) {
   const [sound, setSound] = React.useState();
   const flag=route.params.flag;
   React.useEffect(() => {
+    async function playSound() {
+      const { sound } = await Audio.Sound.createAsync(
+         require('../assets/2번.mp3')
+      );
+      setSound(sound);
+      console.log('Playing Sound');
+      await sound.playAsync();
+  }
     if(flag==1){
-      async function playSound() {
-        const { sound } = await Audio.Sound.createAsync(
-           require('../assets/2번.mp3')
-        );
-        setSound(sound);
-        console.log('Playing Sound');
-        await sound.playAsync();
-    }
+
       playSound();
     }
   }, [flag]);
 
   const stopSound=()=>{
-    sound.stopAsync();
+    if(flag==1){
+      sound.stopAsync();
+    }
   }
     return (
       <View style={layout.backgroundContainerMain}>
