@@ -1,37 +1,14 @@
-import * as React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { TouchableOpacity, Text, View, Alert,
 Button, StyleSheet, ImageBackground } from "react-native";
 import { Audio } from 'expo-av';
-
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';
 
 //카카오 연결 없이 사용하기
 function NoConnectScreen({ navigation }) {
-
-  const [sound, setSound] = React.useState();
-
-  async function playSound() {
-      const { sound } = await Audio.Sound.createAsync(
-         require('../assets/1번.mp3')
-      );
-      setSound(sound);
-      console.log('Playing Sound');
-      await sound.playAsync();
-  }
-
-  React.useEffect(() => {
-  return sound
-    ? () => {
-        sound.unloadAsync(); }
-    : undefined;
-  }, [sound]);
-
-  const audio = (text) => {
-    Alert.alert('안내창', text);
-  };
-
+  
   return (
     <View style={layout.backgroundContainerMain}>
       <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
@@ -39,7 +16,7 @@ function NoConnectScreen({ navigation }) {
             <TouchableOpacity onPress={() => navigation.navigate('Create Wallet')} style={button.buttonBox_yellow}>
                 <Text style={text.buttonText_small}>이전으로</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={playSound} style={button.buttonBox_yellow}>
+            <TouchableOpacity style={button.buttonBox_yellow}>
                 <Text style={text.buttonText_small}>사용 방법</Text>
             </TouchableOpacity>
         </View>
