@@ -22,7 +22,7 @@ function MoreContentScreen({ navigation }) {
               <Text style={text.text_yellow}>더 알아보기 페이지</Text>
         </View>
       </View>
-      <TouchableOpacity onPress={() => Alert.alert('우왕', '완료 버튼을 누르셨군요')} style={button.buttonBox_yellow}>
+      <TouchableOpacity onPress={() => Alert.alert('안내창', '완료 버튼을 누름')} style={button.buttonBox_yellow}>
         <Text style={text.buttonText_small}>완료</Text>
       </TouchableOpacity>
       </ImageBackground>

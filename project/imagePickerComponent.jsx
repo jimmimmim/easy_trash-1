@@ -6,7 +6,7 @@ import button from './src/styles/Button';
 import textstyle from './src/styles/Text';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-function ImagePickerComponent({ onSubmit }) {
+function ImagePickerComponent({ onSubmit, navigation }) {
   const [image, setImage] = useState(null);
   const [text, setText] = useState('Please add an image');
 
@@ -47,9 +47,9 @@ function ImagePickerComponent({ onSubmit }) {
   };
   return (
     <View style={{flex:1}}>
-        <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={button.buttonBox_yellow}>
-            <Text style={textstyle.buttonText_small}>이전으로</Text>
-        </TouchableOpacity>
+{/*         <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={button.buttonBox_yellow}> */}
+{/*             <Text style={textstyle.buttonText_small}>이전으로</Text> */}
+{/*         </TouchableOpacity> */}
         <TouchableOpacity onPress={() => alert('기능안내 음성')} style={button.buttonBox_yellow}>
             <Text style={textstyle.buttonText_small}>사용 방법</Text>
         </TouchableOpacity>

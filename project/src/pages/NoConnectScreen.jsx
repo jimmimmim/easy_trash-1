@@ -41,7 +41,6 @@ function NoConnectScreen({ navigation }) {
             </TouchableOpacity>
             <TouchableOpacity onPress={playSound} style={button.buttonBox_yellow}>
                 <Text style={text.buttonText_small}>사용 방법</Text>
-                <Text style={text.buttonText_hidden}>버튼</Text>
             </TouchableOpacity>
         </View>
         <View style={layout.searchContainer}>
@@ -50,11 +49,9 @@ function NoConnectScreen({ navigation }) {
           <Text style={text.text_yellow}>마이페이지에서 언제든지 연동할 수 있습니다.</Text>
           <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={button.buttonBox_yellow}>
                 <Text style={text.buttonText_small}>사용하기</Text>
-                <Text style={text.buttonText_hidden}>버튼</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate('KakaoConnectScreen')} style={button.buttonBox_yellow}>
                 <Text style={text.buttonText_small}>카카오계정 연결하기</Text>
-                <Text style={text.buttonText_hidden}>버튼</Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>

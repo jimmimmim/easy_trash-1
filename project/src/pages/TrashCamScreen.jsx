@@ -5,6 +5,7 @@ import button from '../styles/Button';
 import text from '../styles/Text';
 import React, { useState, useEffect } from 'react';
 import * as ImagePicker from 'expo-image-picker';
+
 function TrashCamScreen({ navigation }) {
 
   const [image, setImage] = React.useState(null);
@@ -98,13 +99,14 @@ setStatus(result);
   };
   return (
     <View style={layout.backgroundContainerMain}>
+
+        <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
         <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>이전으로</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => alert('기능안내 음성')} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>사용 방법</Text>
         </TouchableOpacity>
-        <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
         {image && <Image
         style={{
         width: "100%",

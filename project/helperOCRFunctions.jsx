@@ -1,5 +1,12 @@
+// import { GOOGLE_API_KEY } from '@env';
+// import { GOOGLE_API_KEY } from "react-native-dotenv";
+
+
 //file name: helperFunctions.js
 const API_KEY = 'AIzaSyAx9LPUPnfinGPBv9eO6O6yNGCUJ8kgUOA'; //put your key here.
+
+// const API_KEY = GOOGLE_API_KEY;
+
 //this endpoint will tell Google to use the Vision API. We are passing in our key as well.
 const API_URL = `https://vision.googleapis.com/v1/images:annotate?key=${API_KEY}`;
 function generateBody(image) {

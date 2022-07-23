@@ -10,7 +10,7 @@ import text from '../styles/Text';
 import TextRecognition from 'react-native-text-recognition';
 import * as ImagePicker from 'expo-image-picker';
 
-function ImageUpload() {
+function ImageUpload({navigation}) {
   // The path of the picked image
   const [pickedImagePath, setPickedImagePath] = useState('');
   const [resultText, setResultText] = useState('');
