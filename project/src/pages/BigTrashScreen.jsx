@@ -40,31 +40,50 @@ function BigTrashScreen({ navigation ,route}) {
       console.log('Playing Sound');
       await sound.playAsync();
   }
-    playSound();
+    if(flag==1){
+      playSound();
+    }
   }, []);
 
   const stopSound=()=>{
-    sound.stopAsync();
+   
+    if(flag==1){
+ 
+      sound.stopAsync();
+    }
+    
+  }
+  async function informHowto(){
+    if(flag==1){
+      stopSound();
+    }
+    const { sound } = await Audio.Sound.createAsync(
+      require('../assets/11번.mp3')
+   );
+   setSound(sound);
+   console.log('Playing Sound');
+   await sound.playAsync();
+   
   }
   return (
     <View style={layout.backgroundContainerMain}>
       <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
       <View style={layout.twoButtonContainer}>
-        <TouchableOpacity onPress={() => navigation.goBack()} style={button.buttonBox_yellow}>
+        <TouchableOpacity onPress={() => {navigation.goBack(),stopSound()}} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>이전으로</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => alert('기능안내 음성')} style={button.buttonBox_yellow}>
+        <TouchableOpacity onPress={() => {informHowto()}} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>사용 방법</Text>
         </TouchableOpacity>
       </View>
       <View style={layout.twoCircleContainer}>
         <View style={layout.innerCircleContainer}>
-          <TouchableOpacity onPress={() => navigation.navigate('CallScreen')} style={button.buttonCircle_yellow_center}>
+          <TouchableOpacity onPress={() => {navigation.navigate('CallScreen'),stopSound()}} style={button.buttonCircle_yellow_center}>
               <Text style={text.buttonText_small}>전화 신청</Text>
           </TouchableOpacity>
         </View>
         <View style={layout.innerCircleContainer}>
-          <TouchableOpacity onPress={() => navigation.navigate('CategorySearchScreen')} style={button.buttonCircle_yellow_center}>
+          <TouchableOpacity onPress={() => {navigation.navigate('CategorySearchScreen'),stopSound()}} style={button.buttonCircle_yellow_center}>
               <Text style={text.buttonText_small}>품목별 가격 안내</Text>
           </TouchableOpacity>
         </View>
