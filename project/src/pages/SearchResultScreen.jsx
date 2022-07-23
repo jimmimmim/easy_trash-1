@@ -122,9 +122,6 @@ function SearchResultScreen({ route, navigation }) {
       <TouchableOpacity onPress={() => searchFilterFunction(valueText)} style={button.buttonBox_yellow}>
           <Text style={text.buttonText_small}>결과 보기</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('MoreContentScreen')} style={button.buttonBox_yellow}>
-        <Text style={text.buttonText_small}>더 알아보기</Text>
-      </TouchableOpacity>
       </ImageBackground>
     </View>
   );

@@ -43,11 +43,14 @@ function CallScreen({ navigation ,route}) {
             <Text style={text.buttonText_small}>사용 방법</Text>
         </TouchableOpacity>
       </View>
-      <View style={layout.twoCircleContainer}>
-        <View style={layout.innerCircleContainer}>
-              <Text style={text.text_yellow}>전화 절차 안내 텍스트</Text>
+        <View style={[layout.innerTextContainer]}>
+          <Text style={[text.text_yellow, {fontSize: 30, lineHeight: 40}]}>
+          화면 중앙의 안내 텍스트를 스크린 리더를 이용해 들으시고
+          화면 하단의 "신청하기" 버튼을 누르면
+          전화 어플로 번호가 입력된 채 이동합니다.{"\n"}
+          전화를 거신 후 안내에 따라 신청하시면 됩니다.
+          </Text>
         </View>
-      </View>
       <TouchableOpacity onPress={() => call()} style={button.buttonBox_yellow}>
         <Text style={text.buttonText_small}>신청하기</Text>
       </TouchableOpacity>

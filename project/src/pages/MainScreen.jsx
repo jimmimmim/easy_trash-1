@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { TouchableOpacity, Text, SafeAreaView, Image, ImageBackground } from "react-native";
+import { TouchableOpacity, Text, SafeAreaView, View, Image, ImageBackground } from "react-native";
 import layout from '../styles/Layout';
 import button from '../styles/Button';
 import text from '../styles/Text';

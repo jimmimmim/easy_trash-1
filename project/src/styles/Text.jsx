@@ -76,7 +76,6 @@ const Text = StyleSheet.create({
         marginTop: 10,
         fontSize: 25,
         color: '#FFF',
-        //alignSelf: 'center',
         margin: 10,
     },
 

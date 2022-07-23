@@ -58,6 +58,11 @@ const Layout = StyleSheet.create({
         width: "90%",
         marginBottom: 15,
     },
+    innerTextContainer: {
+        flex: 1,
+        width: "90%",
+        marginBottom: 15,
+    },
     twoButtonContainer: {
         flex: 0,
 //         borderColor: 'red',

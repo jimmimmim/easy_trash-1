@@ -30,6 +30,7 @@ function CreateWalletScreen({ navigation,route }) {
     return (
       <View style={layout.backgroundContainerMain}>
         <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
+
         <Image style={layout.logo} source={require('../styles/minilogo.png')} />
         <Text style={text.text_yellow}>카카오 계정 연동을 하면
             {"\n"} 알림톡을 받으실 수 있습니다.</Text>

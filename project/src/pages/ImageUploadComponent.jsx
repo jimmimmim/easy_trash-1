@@ -121,32 +121,35 @@ return detectedText
 
   return (
     <View style={layout.backgroundContainerMain}>
-           
-            <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
-            <TouchableOpacity onPress={() => {{navigation.goBack(),stopSound()}}} style={button.buttonBox_yellow}>
-                <Text style={textStyle.buttonText_small}>이전으로</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={()=>{stopSound(),informHowto()}} style={button.buttonBox_yellow}>
-                <Text style={textStyle.buttonText_small}>사용 방법</Text>
-            </TouchableOpacity>
-            {/* {image && (
-        <Image
-          source={{ uri: image }}
-          style={{ width: 200, height: 200, resizeMode:"contain" }}
-        />
-      )} */}
-            {text && <Text
-            style={{
-            color: '#FFF',
-            fontSize: 20,
-            margin: 10,
-        }}>이 쓰레기의 분류 타입은{'\n'}{text} 입니다.</Text>}
-            <TouchableOpacity onPress={()=>{stopSound(),showImagePicker()}} style={button.buttonBox_yellow}>
-                <Text style={textStyle.buttonText_small}>갤러리 열기</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={()=>{stopSound(),pickImage()}} style={[button.buttonBox_yellow, {width: "70%"}]}>
-              <Text style={textStyle.buttonText_small}>사진 찍기</Text>
-            </TouchableOpacity>
+        <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
+            <View style={layout.twoButtonContainer}>
+                <TouchableOpacity onPress={() => {{navigation.goBack(),stopSound()}}} style={button.buttonBox_yellow}>
+                    <Text style={textStyle.buttonText_small}>이전으로</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={()=>{stopSound(),informHowto()}} style={button.buttonBox_yellow}>
+                    <Text style={textStyle.buttonText_small}>사용 방법</Text>
+                </TouchableOpacity>
+            </View>
+            <View style={[layout.searchContainer, {alignItems: 'center'}]}>
+                {/* {image && (
+            <Image
+              source={{ uri: image }}
+              style={{ width: 200, height: 200, resizeMode:"contain" }}
+            />
+          )} */}
+                {text && <Text
+                style={{
+                color: '#FFF',
+                fontSize: 20,
+                margin: 10,
+            }}>이 쓰레기의 분류 타입은{'\n'}{text} 입니다.</Text>}
+                <TouchableOpacity onPress={()=>{stopSound(),showImagePicker()}} style={[button.buttonBox_yellow, {width: "70%"}]}>
+                    <Text style={textStyle.buttonText_small}>갤러리 열기</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={()=>{stopSound(),pickImage()}} style={[button.buttonBox_yellow, {width: "70%"}]}>
+                  <Text style={textStyle.buttonText_small}>사진 찍기</Text>
+                </TouchableOpacity>
+            </View>
           </ImageBackground>
         </View>
 
