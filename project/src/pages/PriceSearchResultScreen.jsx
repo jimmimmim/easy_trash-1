@@ -92,7 +92,7 @@ function PriceSearchResultScreen({ route, navigation }) {
     <View style={layout.backgroundContainerMain}>
       <ImageBackground source={require('../styles/greengradient.png')} resizeMode="cover" style={layout.image}>
       <View style={layout.twoButtonContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate('TrashpediaScreen')} style={button.buttonBox_yellow}>
+        <TouchableOpacity onPress={() => navigation.navigate('CategorySearchScreen')} style={button.buttonBox_yellow}>
             <Text style={text.buttonText_small}>이전으로</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => alert('기능안내 음성')} style={button.buttonBox_yellow}>

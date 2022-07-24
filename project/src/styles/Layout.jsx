@@ -65,8 +65,7 @@ const Layout = StyleSheet.create({
     },
     twoButtonContainer: {
         flex: 0,
-//         borderColor: 'red',
-//         borderWidth: 3,
+        width: "90%",
         marginTop: 10,
         marginBottom: 30,
         flexDirection: "row",
@@ -76,8 +75,6 @@ const Layout = StyleSheet.create({
     searchContainer: {
         flex: 1,
         width: "90%",
-//         borderColor: 'green',
-//         borderWidth: 3,
         flexDirection: "column",
         justifyContent: "center",
         marginBottom: 30,

@@ -45,7 +45,7 @@ function CreateWalletScreen({ navigation,route }) {
         </TouchableOpacity>
         <Text style={text.text_yellow}>마이 페이지에서 언제든지 연결 가능해요!</Text>
         <TouchableOpacity onPress={() => {navigation.navigate('HowtoConnectKakao');stopSound();}} style={button.buttonBox_yellow}>
-            <Text style={text.buttonText_small}>카카오 계정 연결하는 법이 궁금해요!</Text>
+            <Text style={text.buttonText_small}>카카오 계정 연결하는 법이{"\n"}궁금해요!</Text>
         </TouchableOpacity>
         </ImageBackground>
       </View>
