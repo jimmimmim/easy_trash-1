@@ -1,6 +1,7 @@
 # easy_trash
 
-https://user-images.githubusercontent.com/88828307/180639945-f0d03f05-c6ca-479a-a30c-5a77e85871ed.png
+<img src="https://user-images.githubusercontent.com/72171903/180640837-c2a70988-cdc3-40a1-ac9f-5cd4bfc1dc8f.png" width="600"/>
+
 <img src="https://user-images.githubusercontent.com/72171903/180640531-26c8324a-9aee-4c61-8eed-03e5a455fc7e.png"  width="600"/>
 
 ## 팀 소개
