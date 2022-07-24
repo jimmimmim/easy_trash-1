@@ -6,7 +6,7 @@ import button from '../styles/Button';
 import text from '../styles/Text';
 
 const runFirst = `window.ReactNativeWebView.postMessage("this is message from web");`;
-const REST_API_KEY = '9228e854590e61dd2956da9bf840fb4e';
+const REST_API_KEY = '';
 const REDIRECT_URI = 'https://localhost:19002/ouath/callback/kakao';
 
 const INJECTED_JAVASCRIPT = `window.ReactNativeWebView.postMessage('message from webView')`;
@@ -79,7 +79,7 @@ function KakaoConnectScreen({ navigation }) {
         originWhitelist={['*']}
         scalesPageToFit={false}
         style={{ marginTop: 30 }}
-        source = {{uri : 'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=9228e854590e61dd2956da9bf840fb4e&redirect_uri=https://localhost:19002/ouath/callback/kakao'}}
+        source = {{uri : 'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${REST_API_KEY}&redirect_uri=https://localhost:19002/ouath/callback/kakao'}}
         injectedJavaScript = {runFirst}
         onMessage = {(event)=>{ console.log(event.nativeEvent["url"]);
                                 LogInProgress(event.nativeEvent["url"]);

@@ -37,7 +37,8 @@ async function informHowto(){
   }
 
 //file name: helperFunctions.js
-const API_KEY = 'AIzaSyAx9LPUPnfinGPBv9eO6O6yNGCUJ8kgUOA'; //put your key here.
+// 환경변수 설정 실패로 지우고 깃헙에 올립니다.
+const API_KEY = ''; //put your key here.
 //this endpoint will tell Google to use the Vision API. We are passing in our key as well.
 const API_URL = `https://vision.googleapis.com/v1/images:annotate?key=${API_KEY}`;
 function generateBody(image) {

@@ -63,7 +63,8 @@ function TrashCamScreen({navigation,route  }) {
   }
 
   console.log(status);
-  const API_KEY = 'AIzaSyAx9LPUPnfinGPBv9eO6O6yNGCUJ8kgUOA';
+  //환경변수설정 오류로 지우고 깃헙에 올립니다.
+  const API_KEY = '';
   const API_URL = `https://vision.googleapis.com/v1/images:annotate?key=${API_KEY}`;
 
   async function callGoogleVisionAsync(image) {
