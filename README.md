@@ -48,5 +48,5 @@
 
 # 프로그램 실행에 관하여
 보안 상의 이유로 API KEY를 제외한 파일을 업로드하였습니다.<br>
-[드라이브](https://drive.google.com/drive/folders/1qPXpH8D_ay7AfnrtF1bfoQpJnI1BkA2M)에 업로드한 apk 파일을 설치하여 실행해 주시길 바라며,<br>
+드라이브에 업로드한 apk 파일을 설치하여 실행해 주시길 바라며,<br>
 Git Clone하여 실행하실 경우 [Google API Key](https://developers.google.com/)를 발급받아 코드에 입력한 후 실행하시면 됩니다.
