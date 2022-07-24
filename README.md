@@ -1,4 +1,4 @@
-# easy_trash
+# 쉬운 쓰레기 (에와냥)
 
 <img src="https://user-images.githubusercontent.com/72171903/180640837-c2a70988-cdc3-40a1-ac9f-5cd4bfc1dc8f.png" width="600"/>
 
@@ -14,7 +14,7 @@
 
 ##  타임라인
 
-| Week | 커리큘럼 내용 |
+| Week | 기획 및 구현 내용 |
 | ------ | ----------- |
 | 1주차 | 문제상황 파악 및 해결방안 모색 |
 | 2주차 | 서비스 사용 대상자 확정 및 사전 조사 |
