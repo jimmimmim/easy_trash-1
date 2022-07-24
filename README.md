@@ -11,7 +11,7 @@
 ## 사용 스택
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 <img src="https://img.shields.io/badge/expo-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-<img src="https://img.shields.io/badge/google-#4285F4?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/google-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 <img src="https://img.shields.io/badge/kakao-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 
 ![Untitled](https://user-images.githubusercontent.com/88828307/180639945-f0d03f05-c6ca-479a-a30c-5a77e85871ed.png)
