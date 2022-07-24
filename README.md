@@ -28,16 +28,22 @@
 ## 서비스 소개
 
 
-## 사용 스택
-
 ## 기술 스택
 
 | JavaScript | React Native | Expo | Google API | Kakao API | 
 | :--------: | :--------: | :--------: | :--------: | :--------: | 
 |   ![image](https://user-images.githubusercontent.com/72171903/180640940-cff8ce3c-1f89-44be-880c-9e64e95b0a7c.png)    |  <img src="https://user-images.githubusercontent.com/72171903/180640959-031a6856-aec8-47af-bf13-5cea5bf41214.png" width="150" />  | <img src="https://user-images.githubusercontent.com/72171903/180641062-8424729a-9ca7-47ab-81c7-d1629a2a2dea.png" width="120" />  | <img src="https://user-images.githubusercontent.com/72171903/180640970-760df4ac-dfab-4a11-b67c-379dfae83d9a.png" width="80" /> | <img src="https://user-images.githubusercontent.com/72171903/180641112-e3b231fc-1965-4da4-b8e8-9a95df328aa3.png" width="80" />
 
-<img src="https://user-images.githubusercontent.com/88828307/180639945-f0d03f05-c6ca-479a-a30c-5a77e85871ed.png" width="600"/>
+<!-- <img src="https://user-images.githubusercontent.com/88828307/180639945-f0d03f05-c6ca-479a-a30c-5a77e85871ed.png" width="600"/>
+ -->
+## 기능 명세
+<img src="https://user-images.githubusercontent.com/72171903/180642106-ffff4bf0-1172-49ff-8bbb-197446b606b5.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/72171903/180642111-3b117c27-da46-45fb-b057-45f70ed53c99.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/72171903/180642120-ab28b030-a851-4f9b-bd22-37f0030ad19e.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/72171903/180642147-54e8b262-d9a4-4e7e-bc6d-8755a7ece6dc.png" width="600"/>
+
+
 
 # 프로그램 실행에 관하여
-보안 상의 이유로 API KEY를 제외한 파일을 업로드하였습니다.
+보안 상의 이유로 API KEY를 제외한 파일을 업로드하였습니다.<br>
 Google API Key를 생성하여 코드에 입력한 후 실행하시면 됩니다.
